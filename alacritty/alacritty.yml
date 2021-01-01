@@ -4,7 +4,7 @@
 live_config_reload: true 
 
 shell:
-  program: /bin/bash
+  program: /bin/zsh
 
 # -------------------------------------------
 # ----- Terminal window section
