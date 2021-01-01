@@ -2,6 +2,6 @@
 
 # tmux, tpm 
 
-# zsh, oh-my-zsh, starship
+# zsh, zsh-alias, oh-my-zsh, starship
 
 # neovim, vim-plug
