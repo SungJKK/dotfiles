@@ -4,6 +4,7 @@
 - [Screenshots](#screenshots)
 - [Introduction](#introduction)
 - [Installation](#installation)
+- [KeyBindings](#keybindings)
 - [Feedback](#feedback)
 - [Author](#author)
 
@@ -35,6 +36,9 @@ I have not tested on other machines or distros.
 ```
 # not tested yet
 ```
+
+## KeyBindings
+
 
 ## Feedback 
 I will not check this repo often, but [feedbacks](https://github.com/SungJKK/.dotfiles/issues) are always greeted!
