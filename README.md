@@ -17,6 +17,7 @@ personal machine/distro :
 - arch linux
 
 dotfiles are for the following stack :
+-htop
 - alacritty
 - tmux
 - zsh

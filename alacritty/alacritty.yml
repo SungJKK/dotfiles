@@ -17,11 +17,11 @@ window:
 
   # padding around windows
   padding:
-    x: 15
-    y: 15
+    x: 5
+    y: 5
 
   # spread additional padding evenly around terminal content
-  dynamic_padding: false 
+  dynamic_padding: false
   dynamic_title: false
 
   # window decorations. (false is window w/out borders & title bars)
@@ -29,7 +29,7 @@ window:
 
 draw_bold_text_with_bright_colors: true 
 
-background_opacity: 0.97
+background_opacity: 1
 
 selection:
   # if 'true', text will be copied to both primary & selection clipboard
@@ -47,6 +47,22 @@ mouse:
 # ----- Fonts section
 # -------------------------------------------
 font:
+  normal:
+    family: Hack Nerd Font 
+    style: Regular
+
+  bold:
+    family: 
+    style: Bold
+
+  italic:
+    family: 
+    style: Italic
+
+  bold_italic:
+    family: "DejaVu Sans Mono"
+    style: Bold Italic
+
   size: 11.0
 
   # Good to setup true with retina display (mostly OSX)
@@ -83,6 +99,33 @@ schemes:
           cyan: '#76D4D6'
           white: '#FFFFFF'
 
+  panda: &panda
+    colors:
+      primary:
+        background: '#292A2B'
+        foreground: '#E6E6E6'
+
+      normal:
+        black:   '#292A2B'
+        red:     '#FF2C6D'
+        green:   '#19f9d8'
+        yellow:  '#FFB86C'
+        blue:    '#45A9F9'
+        magenta: '#FF75B5'
+        cyan:    '#67d3c2'
+        orange:  '#B084EB'
+        white:   '#E6E6E6'
+
+      bright:
+        black:   '#292A2B'
+        red:     '#FF2C6D'
+        green:   '#19f9d8'
+        yellow:  '#ffcc95'
+        blue:    '#6FC1FF'
+        magenta: '#FF9AC1'
+        cyan:    '#67d3c2'
+        white:   '#ffffff'
+
   nova: &nova
     colors:
         primary:
@@ -113,32 +156,4 @@ schemes:
           cyan:    '#7FC1CA'
           white:   '#E6EEF3'
 
-  panda: &panda
-    colors:
-      primary:
-        background: '#292A2B'
-        foreground: '#E6E6E6'
-
-      normal:
-        black:   '#292A2B'
-        red:     '#FF2C6D'
-        green:   '#19f9d8'
-        yellow:  '#FFB86C'
-        blue:    '#45A9F9'
-        magenta: '#FF75B5'
-        cyan:    '#67d3c2'
-        orange:  '#B084EB'
-        white:   '#E6E6E6'
-
-      bright:
-        black:   '#292A2B'
-        red:     '#FF2C6D'
-        green:   '#19f9d8'
-        yellow:  '#ffcc95'
-        blue:    '#6FC1FF'
-        magenta: '#FF9AC1'
-        cyan:    '#67d3c2'
-        white:   '#ffffff'
-
-
-colors: *panda
+colors: *nova
