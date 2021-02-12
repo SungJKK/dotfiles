@@ -3,7 +3,6 @@
   // python config 
   "python.linting.enabled": true,
 
-
   // coc-explorer
   "explorer.width": 30,
   "explorer.icon.enableNerdfont": true,

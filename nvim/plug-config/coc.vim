@@ -207,5 +207,5 @@ autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | end
 autocmd User CocNvimInit :CocCommand explorer
 
 
-
-
+" -- yats typescript syntax support 
+let g:yats_host_keyword = 1

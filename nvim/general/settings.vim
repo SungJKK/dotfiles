@@ -2,7 +2,7 @@
 let g:mapleader = "\<Space>"
 
 syntax enable                           " Enables syntax highlighing
-filetype on
+filetype plugin indent on
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set encoding=UTF-8                      " The encoding displayed
 set pumheight=10                        " Makes popup menu smaller

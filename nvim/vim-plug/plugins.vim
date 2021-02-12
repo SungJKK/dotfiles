@@ -7,8 +7,14 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
-    " Programming
+    " html
     Plug 'mattn/emmet-vim'
+
+    " javascript / typescript
+    Plug 'pangloss/vim-javascript'
+    Plug 'HerringtonDarkholme/yats.vim'
+    Plug 'MaxMEllon/vim-jsx-pretty'
+
 
     " Utilities
     Plug 'preservim/nerdcommenter'                              " easy commenting multi-lines
