@@ -12,13 +12,13 @@ shell:
 window:
   # terminal window dimensions
   dimensions:
-    columns: 150
-    lines: 44
+    columns: 100
+    lines: 28
 
   # padding around windows
   padding:
-    x: 5
-    y: 5
+    x: 0
+    y: 0
 
   # spread additional padding evenly around terminal content
   dynamic_padding: false
@@ -48,15 +48,15 @@ mouse:
 # -------------------------------------------
 font:
   normal:
-    family: Hack Nerd Font 
+    family: "DejaVu Sans Mono"
     style: Regular
 
   bold:
-    family: 
+    family: "DejaVu Sans Mono"
     style: Bold
 
   italic:
-    family: 
+    family: "DejaVu Sans Mono"
     style: Italic
 
   bold_italic:
@@ -156,4 +156,4 @@ schemes:
           cyan:    '#7FC1CA'
           white:   '#E6EEF3'
 
-colors: *nova
+colors: *panda

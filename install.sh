@@ -1,11 +1,42 @@
-# alacritty 
+#!/bin/bash
 
-# tmux, tpm 
+# ==> alacritty 
+  # path : ~/.config/alacritty/alacritty.yml
 
-# zsh, zsh-alias, oh-my-zsh, starship
+# ==> gitconfig
+  # path : ~/.gitconfig & ~/.gitignore_global
 
-# neovim, vim-plug, pynvim (pip install pynvim), nerdfonts (yay -S nerd-fonts-complete), ranger + ueberzug
+# ==> htop
+  # path : ~/.config/htop/htoprc
 
-# ranger configuration (.config/ranger)
-# sudo pacman -S fzf ripgrep the_silver_searcher fd
-# yay -S universal-ctags-git
+# ==> neofetch
+  # path : ~/.config/neofetch/config.conf
+
+
+# ==> zathura
+  # path : ~/.config/zathura/zathurarc
+
+
+# TODO : tmux, zsh, starship, vim
+# ==> tmux 
+  # path : 
+
+# ==> zsh
+  # path : 
+
+# ==> starship
+  # path : 
+
+# ==> fonts 
+  # path : 
+
+# ==> vim
+  # path : ~/.vim/*
+
+# ==> neovim
+  # path : ~/.config/nvim/*
+
+# ==> firefox
+  # path : 
+
+
