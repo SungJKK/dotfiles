@@ -44,23 +44,23 @@ mouse:
 
 
 # -------------------------------------------
-# ----- Fonts section
+# ----- Fonts section (requires restart)
 # -------------------------------------------
 font:
   normal:
-    family: "DejaVu Sans Mono"
+    family: "JetBrainsMonoNL" 
     style: Regular
 
   bold:
-    family: "DejaVu Sans Mono"
+    family: "JetBrainsMonoNL"
     style: Bold
 
   italic:
-    family: "DejaVu Sans Mono"
+    family: "JetBrainsMonoNL"
     style: Italic
 
   bold_italic:
-    family: "DejaVu Sans Mono"
+    family: "JetBrainsMonoNL"
     style: Bold Italic
 
   size: 11.0
