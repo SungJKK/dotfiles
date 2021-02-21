@@ -1,5 +1,5 @@
 # You can check all your aliases in zsh by typing 
-  # $ alias
+# $ alias
 
 # ==> For better readability
 alias diff='diff --color=auto'
@@ -9,22 +9,17 @@ alias ls='ls --color=auto'
 
 # for man pages
 man() {
-  # list of good man pages for understanding linux : 
-  # ascii (7), boot(7), charsets(7), chmod(1), credentials(7)
-  # fstab(5), hier(7), systemd(1)
-  # locale(1p), locale(5), locale(7)
-  # printf(3), proc(5), regex(7), signal(7)
-  # term(5), term(7), termcap(5), terminfo(5), utf-8(7)
-
-  export LESS_TERMCAP_mb=$'\e[1;31m'
-  export LESS_TERMCAP_md=$'\e[1;31m'
+  export LESS_TERMCAP_mb=$'\e[1;33m'
+  export LESS_TERMCAP_md=$'\e[1;33m'
   export LESS_TERMCAP_me=$'\e[0m'
+
+  export LESS_TERMCAP_so=$'\e[01;31m'
   export LESS_TERMCAP_se=$'\e[0m'
-  export LESS_TERMCAP_so=$'\e[01;33m'
+  
   export LESS_TERMCAP_ue=$'\e[0m'
-  export LESS_TERMCAP_us=$'\e[1;37m'
-  export LESS=-r
-  export GROFF_NO_SIGR=1        # for console & gnome-terminal
+  export LESS_TERMCAP_us=$'\e[1;4;34m'
+
+  export GROFF_NO_SGR=1                  # for konsole and gnome-terminal
   command man "$@"
 }
 

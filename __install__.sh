@@ -30,7 +30,7 @@
   # path : ~/.config/zathura/zathurarc
 
 
-# TODO : zsh, firefox, neovim, 
+# TODO : firefox, neovim, 
 # ==> zsh
   # path : ~/.zshrc, ~/.zsh-custom/*
 
