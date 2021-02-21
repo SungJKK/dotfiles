@@ -3,13 +3,13 @@
 # ==> gitconfig
   # path : ~/.gitconfig & ~/.gitignore_global
 
-# ==> fonts (Hack fonts for terminal, Office Code Pro for regular)
+# ==> fonts (JetBrains Mono for terminal, Office Code Pro for regular)
   # for terminal : JetBrains Mono
   # for general : Office Code Pro
-  # path : ~/.fonts/*
+  # path : ~/.local/share/fonts/*
 
-# ==> alacritty 
-  # path : ~/.config/alacritty/alacritty.yml
+# ==> kitty
+  # path : ~/.config/kitty/kitty.conf
 
 # ==> htop
   # path : ~/.config/htop/htoprc
@@ -23,16 +23,16 @@
 # ==> starship
   # path : ~/.config/starship.toml
 
+# ==> vim
+  # path : ~/.vim/*
+
 # ==> zathura
   # path : ~/.config/zathura/zathurarc
 
 
-# TODO : zsh, vim, neovim, firefox
+# TODO : zsh, firefox, neovim, 
 # ==> zsh
-  # path : 
-
-# ==> vim
-  # path : ~/.vim/*
+  # path : ~/.zshrc, ~/.zsh-custom/*
 
 # ==> neovim
   # path : ~/.config/nvim/*

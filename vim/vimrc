@@ -1,0 +1,16 @@
+" Configuration files
+source $HOME/.vim/vim-plug.vim
+
+source $HOME/.vim/general/settings.vim
+source $HOME/.vim/general/mappings.vim
+
+source $HOME/.vim/plug-config/nerd-tree.vim
+source $HOME/.vim/plug-config/nerd-commenter.vim
+source $HOME/.vim/plug-config/vim-table.vim
+
+source $HOME/.vim/plug-config/rainbow-parantheses.vim
+source $HOME/.vim/themes/airline.vim
+source $HOME/.vim/themes/vs-code.vim
+" source $HOME/.vim/themes/papercolor.vim
+
+
