@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# TODO : add automated installation script for the following dotfiles. 
+
 # ==> gitconfig
   # path : ~/.gitconfig & ~/.gitignore_global
 
@@ -20,6 +22,9 @@
 # ==> tmux 
   # path : ~/.tmux.conf
 
+# ==> zsh
+  # path : ~/.zshrc, ~/.zsh-custom/*
+
 # ==> starship
   # path : ~/.config/starship.toml
 
@@ -30,10 +35,7 @@
   # path : ~/.config/zathura/zathurarc
 
 
-# TODO : firefox, neovim, 
-# ==> zsh
-  # path : ~/.zshrc, ~/.zsh-custom/*
-
+# TODO : finish config files for firefox, neovim, 
 # ==> neovim
   # path : ~/.config/nvim/*
 

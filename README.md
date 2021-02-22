@@ -14,35 +14,40 @@
 ## Introduction 
 personal machine/distro : 
 - thinkpad t460
-- arch linux
+- openSUSE TumbleWeed
 
-dotfiles are for the following stack :
--htop
-- alacritty
+dotfiles are for the following configurations :
+- gitconfig
+- fonts
+- kitty 
+
+- htop
+- neofetch 
+
 - tmux
 - zsh
-- neovim
+- starship prompt
+- vim       (for very basic, lightweight editing)
+- neovim    (for heavy editing and programming)
+
+- zathura pdf viewer
+- firefox web browser
+ 
 
 ## Installation
-The following installations assumes you already have installed the stack above.  
-**Warning:**   
+**Warning:**
 This is a very personal setup, and I doubt it (b/c its just configuration files), but installation scripts may not work.   
 I have not tested on other machines or distros.
 
-#### Arch Linux
+#### openSUSE TW
 ```
-```
-
-#### Mac OS
-```
-# not tested yet
 ```
 
 ## KeyBindings
 
 
 ## Feedback 
-I will not check this repo often, but [feedbacks](https://github.com/SungJKK/.dotfiles/issues) are always greeted!
+[Feedbacks](https://github.com/SungJKK/.dotfiles/issues) are always welcomed!
 
 ## Author
 Sung Joong Kim
