@@ -1,6 +1,0 @@
-# keep command history till 800 
-export HISTSIZE=800
-
-# misc
-export player="spotify"
-export LANG=en_US.UTF-8

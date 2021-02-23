@@ -23,7 +23,8 @@
   # path : ~/.tmux.conf
 
 # ==> zsh
-  # path : ~/.zshrc, ~/.zsh-custom/*
+  # path : ~/.zshrc, 
+  # path : ~/.oh-my-zsh/custom/
 
 # ==> starship
   # path : ~/.config/starship.toml
@@ -35,11 +36,8 @@
   # path : ~/.config/zathura/zathurarc
 
 
-# TODO : finish config files for firefox, neovim, 
+# TODO : finish config files for neovim
 # ==> neovim
   # path : ~/.config/nvim/*
-
-# ==> firefox
-  # path : 
 
 
