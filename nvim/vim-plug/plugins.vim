@@ -2,56 +2,49 @@
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
   silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  "autocmd VimEnter * PlugInstall
-  "autocmd VimEnter * PlugInstall | source $MYVIMRC
+    \ autocmd VimEnter * PlugInstall
+    \ autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
-call plug#begin('~/.config/nvim/autoload/plugged')
-    " html
+call plug#begin('~/.config/nvim/archive-plugins')
+    " ==> Programming
     Plug 'mattn/emmet-vim'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'preservim/nerdcommenter'                              
 
-    " javascript / typescript
-    Plug 'pangloss/vim-javascript'
-    Plug 'HerringtonDarkholme/yats.vim'
-    Plug 'MaxMEllon/vim-jsx-pretty'
-
-
-    " Utilities
-    Plug 'preservim/nerdcommenter'                              " easy commenting multi-lines
-    Plug 'tpope/vim-surround'                                   " easy surrounding words 
-    Plug 'kevinhwang91/rnvimr'                                  " ranger file viewer
-    Plug 'norcalli/nvim-colorizer.lua'                          " color 
-    Plug 'liuchengxu/vim-which-key'                             " show key bindings (which key)
-    Plug 'voldikss/vim-floaterm'                                " vim floaterm
-
-    " fuzzy file search 
-    Plug 'junegunn/fzf'
-    Plug 'junegunn/fzf.vim'
-    Plug 'airblade/vim-rooter'
-
-    " git integration 
-    Plug 'mhinz/vim-signify'
+    " ==> Git integration
+    Plug 'airblade/vim-gitgutter'
     Plug 'tpope/vim-fugitive'
     Plug 'junegunn/gv.vim'
 
-    " Stable version of coc 
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    " ==> Utilities
+    " Plug 'liuchengxu/vim-which-key'                             
+    Plug 'vimwiki/vimwiki'
+    Plug 'mhinz/vim-startify'
+    Plug 'tpope/vim-surround'                                   
+    Plug 'dhruvasagar/vim-table-mode'                           
+    Plug 'norcalli/nvim-colorizer.lua'                         
 
-    " Better Syntax Support
+    " ==> File explorers
+    Plug 'kevinhwang91/rnvimr'                                
+
+    " fuzzy file search
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
+    " ==> Better Syntax Support
     Plug 'sheerun/vim-polyglot'
     Plug 'luochen1990/rainbow'
-
-    " Vim Colorschemes 
-    Plug 'NLKNguyen/papercolor-theme'
-    Plug 'ChristianChiarulli/nvcode-color-schemes.vim'
+    
+    " ==> Vim Colorschemes
+    Plug 'luochen1990/rainbow'
     Plug 'ghifarit53/tokyonight-vim'
-    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
-    " Vim Airline 
+    Plug 'tomasiser/vim-code-dark'
+    Plug 'rakr/vim-one'
+    
+    " ==> Vim Airline
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
-
-    " vim glyphs
-    Plug 'ryanoasis/vim-devicons'       
-    Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+    
+    " ==> Vim glyphs
+    Plug 'ryanoasis/vim-devicons'
 call plug#end()

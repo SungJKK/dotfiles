@@ -2,14 +2,29 @@
 {
   // python config 
   "python.linting.enabled": true,
+  "python.setInterpreter": "/usr/bin/python3.8",
 
   // coc-explorer
   "explorer.width": 30,
   "explorer.icon.enableNerdfont": true,
   "explorer.previewAction.onHover": false,
+  "explorer.file.showHiddenFiles": true,
+
+  "i": false, // cancel default mapkey
   "explorer.keyMappings.global": {
     "<cr>": ["expandable?", ["expanded?", "collapse", "expand"], "open"],
-    "v": "open:vsplit"
-  },
-  "explorer.file.showHiddenFiles": true
+    "v": "open:vsplit",
+
+    "yp": "copyFilepath",
+    "yn": "copyFilename",
+    "yy": "copyFile",
+    "dd": "cutFile",
+    "p": "pasteFile",
+    "df": "delete",
+    "dF": "deleteForever",
+
+    "a": "addFile",
+    "A": "addDirectory",
+    "r": "rename",
+  }
 }

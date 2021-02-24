@@ -1,21 +1,24 @@
-" set leader key
-let g:mapleader = "\<Space>"
 
 syntax enable                           " Enables syntax highlighing
+syntax on
 filetype plugin indent on
+
+set termguicolors
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set encoding=UTF-8                      " The encoding displayed
 set pumheight=10                        " Makes popup menu smaller
 set fileencoding=utf-8                  " The encoding written to file
-set ruler              			            " Show the cursor position all the time
+set ruler              			        " Show the cursor position all the time
+set nowrap                              " Don't wrap lines
 set cmdheight=2                         " More space for displaying messages
 set iskeyword+=-                      	" treat dash separated words as a word text object"
 set mouse=a                             " Enable your mouse
 set splitbelow                          " Horizontal splits will automatically be below
 set splitright                          " Vertical splits will automatically be to the right
 set t_Co=256                            " Support 256 colors
+set t_ut=
 set conceallevel=0                      " So that I can see `` in markdown files
-set tabstop=2                           " Insert 2 spaces for a tab
+set tabstop=4                           " Insert 2 spaces for a tab
 set shiftwidth=2                        " Change the number of space characters inserted for indentation
 set smarttab                            " Makes tabbing smarter will realize you have 2 vs 4
 set expandtab                           " Converts tabs to spaces
@@ -25,14 +28,25 @@ set background=dark                     " tell vim what the background color loo
 set showtabline=2                       " Always show tabs
 set updatetime=300                      " Faster completion
 set timeoutlen=500                      " By default timeoutlen is 1000 ms
-set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus               " Copy paste between vim and everything else
-set termguicolors
+autocmd FileType * set formatoptions-=cro                  " Stop newline continution of comments
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
+" Disable audible & visual bells
+set noerrorbells
+set novisualbell
+set t_vb=
 
-let g:rainbow_active=1                " globally enable rainbow parantheses
-let g:rainbow#max_level = 16
-let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
+" Set character between vertical window splits
+set fillchars=vert:.
+
+" Set swap files directory
+if !isdirectory($HOME.'/.config/nvim/archive-swap') && exists('*mkdir')
+  call mkdir($HOME.'/.config/nvim/archive-swap')
+endif
+set directory^=$HOME/.vim/archive-swap//
+
+
+
 

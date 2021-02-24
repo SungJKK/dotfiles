@@ -35,12 +35,11 @@ nnoremap <M-k> :resize +2<CR>
 nnoremap <M-h> :vertical resize -2<CR>
 nnoremap <M-l> :vertical resize +2<CR>
 
-" Toggle NerdTree using <space> + t
-nnoremap <leader>t :NERDTreeToggle<CR>
+" Toggle NerdTree using <space> + n
+nnoremap <leader>n :NERDTreeToggle<CR>
 
 " Show macros with <space> + m
 nnoremap <leader>m  :<c-u><c-r><c-r>='let @'. v:register .' = '. string(getreg(v:register))<cr><c-f><left>
-
 
 
 
