@@ -10,7 +10,6 @@
 
 ## Screenshots 
 
-
 ## Introduction 
 personal machine/distro : 
 - thinkpad t460
@@ -40,7 +39,7 @@ This is a very personal setup, and I doubt it (b/c its just configuration files)
 I have not tested on other machines or distros.
 
 #### openSUSE TW
-```
+```bash
 ```
 
 ## KeyBindings
@@ -51,5 +50,4 @@ I have not tested on other machines or distros.
 
 ## Author
 Sung Joong Kim
-
 

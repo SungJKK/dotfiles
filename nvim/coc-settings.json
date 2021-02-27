@@ -2,7 +2,7 @@
 {
   // python config 
   "python.linting.enabled": true,
-  "python.setInterpreter": "/usr/bin/python3.8",
+  "python.setInterpreter": "python3",
 
   // coc-explorer
   "explorer.width": 30,
@@ -10,7 +10,6 @@
   "explorer.previewAction.onHover": false,
   "explorer.file.showHiddenFiles": true,
 
-  "i": false, // cancel default mapkey
   "explorer.keyMappings.global": {
     "<cr>": ["expandable?", ["expanded?", "collapse", "expand"], "open"],
     "v": "open:vsplit",

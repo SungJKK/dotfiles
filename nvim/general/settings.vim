@@ -41,11 +41,18 @@ set t_vb=
 " Set character between vertical window splits
 set fillchars=vert:.
 
-" Set swap files directory
-if !isdirectory($HOME.'/.config/nvim/archive-swap') && exists('*mkdir')
-  call mkdir($HOME.'/.config/nvim/archive-swap')
+" Set backup files directory
+set backup
+if !isdirectory($HOME.'/.config/nvim/.archive_bak') && exists('*mkdir')
+  call mkdir($HOME.'/.config/nvim/.archive_bak')
 endif
-set directory^=$HOME/.vim/archive-swap//
+set backupdir^=$HOME/.vim/.archive_bak//
+
+" Set swap files directory
+if !isdirectory($HOME.'/.config/nvim/.archive_swp') && exists('*mkdir')
+  call mkdir($HOME.'/.config/nvim/.archive_swp')
+endif
+set directory^=$HOME/.vim/.archive_swp//
 
 
 

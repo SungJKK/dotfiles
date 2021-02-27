@@ -10,8 +10,8 @@ inoreabbrev <expr> <bar><bar>
       \ <SID>isAtStartOfLine('\|\|') ?
       \ '<c-o>:TableModeEnable<cr><bar><space><bar><left><left>' : '<bar><bar>'
 
-" use '+' as table corners
-let g:table_mode_corner_corner='+'
+" use '|' as table corners
+let g:table_mode_corner_corner='|'
 
 " use <leader>tdd to delete row 
 let g:table_mode_delete_row_map = 1

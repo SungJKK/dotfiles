@@ -41,6 +41,3 @@ nnoremap <leader>m  :<c-u><c-r><c-r>='let @'. v:register .' = '. string(getreg(v
 inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
 
-" Toggle NerdTree using <space> + n
-nnoremap <leader>n :NERDTreeToggle<CR>
-

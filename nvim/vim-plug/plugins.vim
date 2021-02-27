@@ -8,19 +8,33 @@ endif
 
 call plug#begin('~/.config/nvim/archive-plugins')
     " ==> Programming
-    Plug 'mattn/emmet-vim'
+    Plug 'ludovicchabant/vim-gutentags'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+    Plug 'mattn/emmet-vim'
     Plug 'preservim/nerdcommenter'                              
 
     " ==> Git integration
     Plug 'airblade/vim-gitgutter'
     Plug 'tpope/vim-fugitive'
     Plug 'junegunn/gv.vim'
+    Plug 'godlygeek/tabular'
+    Plug 'plasticboy/vim-markdown'
+
+    " ==> Writing & Notes
+    Plug 'vim-pandoc/vim-pandoc'
+    Plug 'junegunn/goyo.vim'
+    Plug 'junegunn/limelight.vim'
+    Plug 'vimwiki/vimwiki'
+
+    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+    Plug 'lervag/vimtex'
+    Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
     " ==> Utilities
-    " Plug 'liuchengxu/vim-which-key'                             
-    Plug 'vimwiki/vimwiki'
     Plug 'mhinz/vim-startify'
+    Plug 'voldikss/vim-floaterm'
+    Plug 'liuchengxu/vim-which-key'                             
     Plug 'tpope/vim-surround'                                   
     Plug 'dhruvasagar/vim-table-mode'                           
     Plug 'norcalli/nvim-colorizer.lua'                         
@@ -32,8 +46,10 @@ call plug#begin('~/.config/nvim/archive-plugins')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
     " ==> Better Syntax Support
-    Plug 'sheerun/vim-polyglot'
     Plug 'luochen1990/rainbow'
+    Plug 'sheerun/vim-polyglot'
+    Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+    Plug 'vim-pandoc/vim-pandoc-syntax'
     
     " ==> Vim Colorschemes
     Plug 'luochen1990/rainbow'
