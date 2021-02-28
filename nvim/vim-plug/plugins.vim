@@ -10,6 +10,7 @@ call plug#begin('~/.config/nvim/archive-plugins')
     " ==> Programming
     Plug 'ludovicchabant/vim-gutentags'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'preservim/tagbar'
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
     Plug 'mattn/emmet-vim'
     Plug 'preservim/nerdcommenter'                              
@@ -26,6 +27,7 @@ call plug#begin('~/.config/nvim/archive-plugins')
     Plug 'junegunn/goyo.vim'
     Plug 'junegunn/limelight.vim'
     Plug 'vimwiki/vimwiki'
+    Plug 'mattn/calendar-vim'
 
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
     Plug 'lervag/vimtex'
@@ -41,9 +43,8 @@ call plug#begin('~/.config/nvim/archive-plugins')
 
     " ==> File explorers
     Plug 'kevinhwang91/rnvimr'                                
-
-    " fuzzy file search
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
 
     " ==> Better Syntax Support
     Plug 'luochen1990/rainbow'

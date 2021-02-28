@@ -1,5 +1,7 @@
+let vim_markdown_preview_toggle=2
+
 " Disable folding
-let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_folding_disabled = 0
 
 " To disable conceal regardless of conceallevel setting,
 let g:vim_markdown_conceal = 0

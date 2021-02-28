@@ -41,11 +41,12 @@ let g:which_key_map['m'] = [ ':registers'                 , 'show macros' ]
 let g:which_key_map['h'] = [ '<C-W>s'                     , 'split below' ]
 let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right' ]
 let g:which_key_map['e'] = [ ':CocCommand explorer'       , 'coc explorer' ]
+let g:which_key_map['a'] = [ ':TagbarToggle'              , 'tagbar' ]
 let g:which_key_map['r'] = [ ':RnvimrToggle'              , 'vim ranger' ]
 let g:which_key_map[','] = [ ':Emmet'                     , 'emmet'  ]
 let g:which_key_map['t'] = [ ':FloatermToggle'            , 'floatterm' ]
 let g:which_key_map['g'] = [ ':Goyo'                      , 'goyo' ]
-let g:which_key_map['f'] = [ ':FZF'                       , 'fzf' ]
+let g:which_key_map['c'] = [ ':CalendarT'                 , 'open_calendar' ]
 
 " Group mappings
 let g:which_key_map['p'] = {
@@ -54,20 +55,31 @@ let g:which_key_map['p'] = {
       \ 'l' : [ ':LLPStartPreview'     , 'latex preview' ]
       \ }
 
-let g:which_key_map['cv'] = [':VimwikiAll2HTML'          , 'vimwiki to html' ]
-" let g:which_key_map['w'] = {
-"       \ 'name' : '+vim_wiki' ,
-"       \ 'v' :
-"       \ }
+let g:which_key_map['f'] = {
+      \ 'name' : '+fzf',
+      \ 'f' : [ ':FZF'                    , 'fuzzy finder' ],
+      \ 'g' : [ ':GFiles'                 , 'git files' ],
+      \ 'm' : [ ':Commits'                , 'git commits' ],
+      \ 'b' : [ ':Buffers'                , 'buffers' ],
+      \ 'c' : [ ':Colors'                 , 'colorschemes' ],
+      \ 'l' : [ ':Lines'                  , 'buffer lines' ],
+      \ 't' : [ ':Tags'                   , 'project tags' ]
+      \ }
 
-" let g:which_key_map.l = {
-"       \ 'name' : '+lsp',
-"       \ 'S' : ['spacevim#lang#util#WorkspaceSymbol()' , 'workspace-symbol'] ,
-"       \ 'g' : {
-"         \ 'name': '+goto',
-"         \ 'd' : ['spacevim#lang#util#Definition()'     , 'definition']      ,
-"         \ },
-"       \ }
+let g:which_key_map['w'] = {
+            \ 'name': '+vim_wiki' ,
+            \ 'w': [ ':VimwikiIndex'                  , 'wiki_index' ],
+            \ 's': [ ':VimwikiUISelect'               , 'wiki_UI_select' ],
+            \ 'i': [ ':VimwikiDiaryIndex'             , 'wiki_diary_index' ],
+            \ 'd': [ ':VimwikiDeleteFile'             , 'delete_wiki_file' ],
+            \ 'r': [ ':VimwikiRenamefile'             , 'rename_wiki_file' ],
+            \ 'n': [ ':VimwikiGoto'                   , 'goto_or_create_wiki' ],
+            \ 'c': [ ':VimwikiAll2HTML'               , 'convert_all_wiki' ],
+            \ 'h': [ ':Vimwiki2HTMLBrowse'            , 'view_wiki_html' ],
+            \ 'l': [ ':VimwikiToggleListItem'         , 'toggle_list_item' ],
+            \ 'g': [ ':VimwikiGenerateLinks'          , 'wiki_gen_links' ],
+            \ 't': [ ':VimwikiTOC'                    , 'gen_toc' ],
+            \ }
 
 " ignore non-top level mappings
 let g:which_key_map['_'] = { 'name': 'which_key_ignore' }

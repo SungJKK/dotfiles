@@ -15,8 +15,9 @@ source $HOME/.config/nvim/syntax/vim-markdown.vim
 " plugin settings
 source $HOME/.config/nvim/plug-configs/markdown-preview.vim
 source $HOME/.config/nvim/plug-configs/goyo-limelight.vim
-source $HOME/.config/nvim/plug-configs/vim-wiki.vim
 source $HOME/.config/nvim/plug-configs/vimtex.vim
+source $HOME/.config/nvim/plug-configs/vim-wiki.vim
+source $HOME/.config/nvim/plug-configs/calendar.vim
 
 source $HOME/.config/nvim/plug-configs/nerd-commenter.vim
 source $HOME/.config/nvim/plug-configs/vim-table.vim
@@ -34,9 +35,9 @@ source $HOME/.config/nvim/keys/which-key.vim
 " theme settings
 source $HOME/.config/nvim/plug-configs/rainbow-parentheses.vim
 source $HOME/.config/nvim/themes/airline.vim
+source $HOME/.config/nvim/themes/vim-code-dark.vim
 " source $HOME/.config/nvim/themes/one.vim
 " source $HOME/.config/nvim/themes/tokyo-night.vim
-source $HOME/.config/nvim/themes/vim-code-dark.vim
 
 
 

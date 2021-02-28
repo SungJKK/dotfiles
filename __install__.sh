@@ -32,11 +32,13 @@
 # ==> vim
   # path : ~/.vim/*
 
+# ==> neovim
+  # path : ~/.config/nvim/*
+  # path : ~/vimwiki/templates/index_template.html
+  # path : ~/viwiki/wiki_html/[css/js]/
+
 # ==> zathura
   # path : ~/.config/zathura/zathurarc
 
 
-# TODO : finish config files for neovim
-# ==> neovim
-  # path : ~/.config/nvim/*
 
