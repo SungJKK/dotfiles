@@ -24,6 +24,9 @@ man() {
 }
 
 # ==> user aliases
+alias lman='man $(find /usr/share/man/man1 -type f | shuf | head -1)'
+  # generate random man page 
+
 alias lt='ls --human-readable --size -1 -S --classify'
   # show files by file sizes
   # in macOS : alias lt='du -sh * | sort -h'
