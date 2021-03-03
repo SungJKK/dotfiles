@@ -1,6 +1,9 @@
 #!/bin/bash
 
 # TODO : add automated installation script for the following dotfiles. 
+# TODO : remaining dotfiles to add 
+        # -- bpytop, xmonad + xmobar, compton, 
+        # -- xfce, sddm, plymouth
 
 # ==> gitconfig
   # path : ~/.gitconfig & ~/.gitignore_global
@@ -39,6 +42,7 @@
 
 # ==> zathura
   # path : ~/.config/zathura/zathurarc
+
 
 
 
