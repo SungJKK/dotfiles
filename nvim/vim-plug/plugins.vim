@@ -10,10 +10,18 @@ call plug#begin('~/.config/nvim/archive-plugins')
     " ==> Programming
     Plug 'ludovicchabant/vim-gutentags'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
     Plug 'preservim/tagbar'
-    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
     Plug 'mattn/emmet-vim'
     Plug 'preservim/nerdcommenter'                              
+    
+    " ==> Better Syntax Support
+    Plug 'luochen1990/rainbow'
+    Plug 'sheerun/vim-polyglot'
+    Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+    Plug 'neovimhaskell/haskell-vim'
+    Plug 'itchyny/vim-haskell-indent'
+    Plug 'vim-pandoc/vim-pandoc-syntax'
 
     " ==> Git integration
     Plug 'airblade/vim-gitgutter'
@@ -46,17 +54,12 @@ call plug#begin('~/.config/nvim/archive-plugins')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
 
-    " ==> Better Syntax Support
-    Plug 'luochen1990/rainbow'
-    Plug 'sheerun/vim-polyglot'
-    Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
-    Plug 'vim-pandoc/vim-pandoc-syntax'
-    
     " ==> Vim Colorschemes
     Plug 'luochen1990/rainbow'
     Plug 'ghifarit53/tokyonight-vim'
     Plug 'tomasiser/vim-code-dark'
     Plug 'rakr/vim-one'
+    Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
     
     " ==> Vim Airline
     Plug 'vim-airline/vim-airline'

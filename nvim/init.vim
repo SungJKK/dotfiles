@@ -8,8 +8,8 @@ source $HOME/.config/nvim/keys/mappings.vim
 
 " syntax settings
 source $HOME/.config/nvim/syntax/vim-polyglot.vim
-source $HOME/.config/nvim/syntax/vim-go.vim
 source $HOME/.config/nvim/syntax/semshi.vim
+source $HOME/.config/nvim/syntax/haskell-vim.vim
 source $HOME/.config/nvim/syntax/vim-markdown.vim
 
 " plugin settings
@@ -38,6 +38,7 @@ source $HOME/.config/nvim/themes/airline.vim
 source $HOME/.config/nvim/themes/vim-code-dark.vim
 " source $HOME/.config/nvim/themes/one.vim
 " source $HOME/.config/nvim/themes/tokyo-night.vim
+" source $HOME/.config/nvim/themes/spaceduck.vim
 
 
 
