@@ -47,6 +47,7 @@ let g:which_key_map[','] = [ ':Emmet'                     , 'emmet'  ]
 let g:which_key_map['t'] = [ ':FloatermToggle'            , 'floatterm' ]
 let g:which_key_map['g'] = [ ':Goyo'                      , 'goyo' ]
 let g:which_key_map['c'] = [ ':CalendarT'                 , 'open_calendar' ]
+let g:which_key_map['l'] = [ '<Plug>(EasyAlign)'                 , 'easy_align' ]
 
 " Group mappings
 let g:which_key_map['p'] = {

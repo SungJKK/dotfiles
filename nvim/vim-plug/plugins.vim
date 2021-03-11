@@ -14,6 +14,7 @@ call plug#begin('~/.config/nvim/archive-plugins')
     Plug 'preservim/tagbar'
     Plug 'mattn/emmet-vim'
     Plug 'preservim/nerdcommenter'                              
+    Plug 'junegunn/vim-easy-align'
     
     " ==> Better Syntax Support
     Plug 'luochen1990/rainbow'
