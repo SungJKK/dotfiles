@@ -18,8 +18,10 @@ call plug#begin('~/.config/nvim/archive-plugins')
     
     " ==> Better Syntax Support
     Plug 'luochen1990/rainbow'
+    Plug 'ekalinin/Dockerfile.vim'
     Plug 'sheerun/vim-polyglot'
     Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+    Plug 'bfrg/vim-cpp-modern'
     Plug 'neovimhaskell/haskell-vim'
     Plug 'itchyny/vim-haskell-indent'
     Plug 'vim-pandoc/vim-pandoc-syntax'
