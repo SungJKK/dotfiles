@@ -36,8 +36,8 @@ source $HOME/.config/nvim/keys/which-key.vim
 " theme settings
 source $HOME/.config/nvim/plug-configs/rainbow-parentheses.vim
 source $HOME/.config/nvim/themes/airline.vim
-" source $HOME/.config/nvim/themes/vim-code-dark.vim
-source $HOME/.config/nvim/themes/one.vim
+source $HOME/.config/nvim/themes/vim-code-dark.vim
+" source $HOME/.config/nvim/themes/one.vim
 " source $HOME/.config/nvim/themes/tokyo-night.vim
 " source $HOME/.config/nvim/themes/spaceduck.vim
 

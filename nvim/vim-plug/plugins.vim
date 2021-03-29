@@ -17,14 +17,18 @@ call plug#begin('~/.config/nvim/archive-plugins')
     Plug 'junegunn/vim-easy-align'
     
     " ==> Better Syntax Support
-    Plug 'luochen1990/rainbow'
-    Plug 'ekalinin/Dockerfile.vim'
     Plug 'sheerun/vim-polyglot'
     Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
     Plug 'bfrg/vim-cpp-modern'
+    Plug 'ekalinin/Dockerfile.vim'
+    Plug 'mtdl9/vim-log-highlighting'
+    Plug 'vim-pandoc/vim-pandoc-syntax'
+    Plug 'elzr/vim-json'
+    Plug 'stephpy/vim-yaml'
+
     Plug 'neovimhaskell/haskell-vim'
     Plug 'itchyny/vim-haskell-indent'
-    Plug 'vim-pandoc/vim-pandoc-syntax'
+    Plug 'luochen1990/rainbow'
 
     " ==> Git integration
     Plug 'airblade/vim-gitgutter'
@@ -44,6 +48,9 @@ call plug#begin('~/.config/nvim/archive-plugins')
     Plug 'lervag/vimtex'
     Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
+    " ==> Task Management
+    Plug 'wsdjeg/vim-todo'
+
     " ==> Utilities
     Plug 'mhinz/vim-startify'
     Plug 'voldikss/vim-floaterm'
@@ -52,14 +59,13 @@ call plug#begin('~/.config/nvim/archive-plugins')
     Plug 'dhruvasagar/vim-table-mode'                           
     Plug 'norcalli/nvim-colorizer.lua'                         
 
-    " ==> File explorers
+    " ==> File Explorers
     Plug 'kevinhwang91/rnvimr'                                
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
 
     " ==> Vim Colorschemes
     Plug 'luochen1990/rainbow'
-    Plug 'ghifarit53/tokyonight-vim'
     Plug 'tomasiser/vim-code-dark'
     Plug 'rakr/vim-one'
     Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
@@ -69,5 +75,5 @@ call plug#begin('~/.config/nvim/archive-plugins')
     Plug 'vim-airline/vim-airline-themes'
     
     " ==> Vim glyphs
-    Plug 'ryanoasis/vim-devicons'
+    Plug 'kyazdani42/nvim-web-devicons'
 call plug#end()
