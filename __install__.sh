@@ -2,8 +2,7 @@
 
 # TODO : add automated installation script for the following dotfiles. 
 # TODO : remaining dotfiles to add 
-      # -- dwm, dmenu, plymouth
-      # -- st, sxiv, vscodium, qutebrowser
+      # -- plymouth, xorgm, dwm, dmenu, st, nvim, sxiv, emacs, firefox 
 
 # ==> gitconfig
   # path : ~/.gitconfig & ~/.gitignore_global

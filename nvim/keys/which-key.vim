@@ -35,6 +35,9 @@ let g:which_key_map['hp'] = 'which_key_ignore'
 let g:which_key_map['tt'] = 'which_key_ignore'
 let g:which_key_map['c'] = { 'name': 'which_key_ignore' }
 
+" ignore non-top level mappings
+let g:which_key_map['_'] = { 'name': 'which_key_ignore' }
+
 " Single mappings
 let g:which_key_map['s'] = [ ':w'                         , 'save file' ]
 let g:which_key_map['m'] = [ ':registers'                 , 'show macros' ]
@@ -51,6 +54,7 @@ let g:which_key_map['r'] = [ ':RnvimrToggle'              , 'vim ranger' ]
 let g:which_key_map['t'] = [ ':FloatermToggle'            , 'floatterm' ]
 
 " Group mappings
+
 let g:which_key_map['p'] = {
       \ 'name' : '+live_preview' ,
       \ 'm' : [ ':MarkdownPreview'     , 'markdown preview' ],
@@ -76,15 +80,10 @@ let g:which_key_map['w'] = {
             \ 'd': [ ':VimwikiDeleteFile'             , 'delete_wiki_file' ],
             \ 'r': [ ':VimwikiRenamefile'             , 'rename_wiki_file' ],
             \ 'n': [ ':VimwikiGoto'                   , 'goto_or_create_wiki' ],
-            \ 'c': [ ':VimwikiAll2HTML'               , 'convert_all_wiki' ],
-            \ 'h': [ ':Vimwiki2HTMLBrowse'            , 'view_wiki_html' ],
             \ 'l': [ ':VimwikiToggleListItem'         , 'toggle_list_item' ],
             \ 'g': [ ':VimwikiGenerateLinks'          , 'wiki_gen_links' ],
             \ 't': [ ':VimwikiTOC'                    , 'gen_toc' ],
             \ }
-
-" ignore non-top level mappings
-let g:which_key_map['_'] = { 'name': 'which_key_ignore' }
 
 " Register which key maps 
 call which_key#register('<Space>', "g:which_key_map")

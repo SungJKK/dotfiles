@@ -42,7 +42,6 @@ call plug#begin('~/.config/nvim/archive-plugins')
     Plug 'junegunn/goyo.vim'
     Plug 'junegunn/limelight.vim'
     Plug 'vimwiki/vimwiki'
-    Plug 'mattn/calendar-vim'
 
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
     Plug 'lervag/vimtex'
@@ -68,7 +67,6 @@ call plug#begin('~/.config/nvim/archive-plugins')
     Plug 'luochen1990/rainbow'
     Plug 'tomasiser/vim-code-dark'
     Plug 'rakr/vim-one'
-    Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
     
     " ==> Vim Airline
     Plug 'vim-airline/vim-airline'
