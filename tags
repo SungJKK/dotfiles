@@ -40,6 +40,7 @@ $FZF_DEFAULT_OPTS	nvim/plug-configs/fzf.vim	/^let $FZF_DEFAULT_OPTS = '--layout=
 <bar><bar>	vim/plug-config/vim-table.vim	/^inoreabbrev <expr> <bar><bar>$/;"	m
 <c-j>	nvim/keys/mappings.vim	/^inoremap <expr> <c-j> ("\\<C-n>")$/;"	m
 <c-k>	nvim/keys/mappings.vim	/^inoremap <expr> <c-k> ("\\<C-p>")$/;"	m
+<c-n>	nvim/general/terminal.vim	/^nnoremap <c-n> :call OpenTerminal()<CR>$/;"	m
 <cr>	nvim/plug-configs/coc.vim	/^inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()$/;"	m
 <leader>	nvim/keys/which-key.vim	/^nnoremap <silent> <leader> :<c-u>WhichKey '<Space>'<CR>$/;"	m
 <leader>	nvim/keys/which-key.vim	/^nnoremap <silent> <leader> :silent WhichKey '<Space>'<CR>$/;"	m
@@ -69,6 +70,7 @@ GGrep	nvim/plug-configs/fzf.vim	/^command! -bang -nargs=* GGrep$/;"	c
 NERDTreeShowHidden	vim/plug-config/nerd-tree.vim	/^let NERDTreeShowHidden = 1$/;"	v
 NERDTreeWinSize	vim/plug-config/nerd-tree.vim	/^let NERDTreeWinSize = 25$/;"	v
 OR	nvim/plug-configs/coc.vim	/^command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')$/;"	c
+OpenTerminal	nvim/general/terminal.vim	/^function! OpenTerminal()$/;"	f
 RG	nvim/plug-configs/fzf.vim	/^command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)$/;"	c
 Rg	nvim/plug-configs/fzf.vim	/^command! -bang -nargs=* Rg$/;"	c
 RipgrepFzf	nvim/plug-configs/fzf.vim	/^function! RipgrepFzf(query, fullscreen)$/;"	f
@@ -160,7 +162,6 @@ g:airline_left_sep	nvim/themes/airline.vim	/^let g:airline_left_sep = ''$/;"	v
 g:airline_powerline_fonts	nvim/themes/airline.vim	/^let g:airline_powerline_fonts = 1$/;"	v
 g:airline_right_sep	nvim/themes/airline.vim	/^let g:airline_right_sep = ''$/;"	v
 g:airline_theme	nvim/themes/one.vim	/^let g:airline_theme='one'$/;"	v
-g:airline_theme	nvim/themes/spaceduck.vim	/^let g:airline_theme = 'spaceduck'$/;"	v
 g:airline_theme	nvim/themes/tokyo-night.vim	/^let g:airline_theme = 'tokyonight'$/;"	v
 g:airline_theme	nvim/themes/vim-code-dark.vim	/^let g:airline_theme='codedark'$/;"	v
 g:airline_theme	vim/themes/airline.vim	/^let g:airline_theme='raven'  $/;"	v
@@ -249,7 +250,6 @@ g:vimtex_view_general_viewer	nvim/plug-configs/vimtex.vim	/^let g:vimtex_view_ge
 g:vimwiki_ext2syntax	nvim/plug-configs/vim-wiki.vim	/^let g:vimwiki_ext2syntax = {'.wiki': 'markdown'}$/;"	v
 g:vimwiki_folding	nvim/plug-configs/vim-wiki.vim	/^let g:vimwiki_folding = ''$/;"	v
 g:vimwiki_list	nvim/plug-configs/vim-wiki.vim	/^let g:vimwiki_list = [{$/;"	v
-g:vimwiki_valid_html_tags	nvim/plug-configs/vim-wiki.vim	/^let g:vimwiki_valid_html_tags = 'b,i,s,u,sub,sup,kbd,br,hr, pre, script'$/;"	v
 g:which_key_map	nvim/keys/which-key.vim	/^let g:which_key_map =  {}$/;"	v
 g:which_key_map	nvim/keys/which-key.vim	/^let g:which_key_map[','] = [ ':Emmet'                     , 'emmet'  ]$/;"	v
 g:which_key_map	nvim/keys/which-key.vim	/^let g:which_key_map['_'] = { 'name': 'which_key_ignore' }$/;"	v
