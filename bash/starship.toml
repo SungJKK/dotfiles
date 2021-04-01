@@ -1,0 +1,39 @@
+
+# username
+[username]
+style_user = "bold dimmed blue"
+format = "[ •](bold cyan)[ $user]($style) "
+show_always = true
+
+# hostname
+[hostname]
+ssh_only = false
+format = "@ [$hostname](red) "
+
+# directory
+[directory]
+format = "in [$path]($style)[$read_only]($read_only_style) "
+truncation_length = 3
+truncate_to_repo = false
+truncation_symbol = "…/"
+
+# new line
+[character]
+success_symbol = "[  ➜](bold green)"
+
+# battery 
+[battery]
+disabled = false
+full_symbol = "🔋"
+charging_symbol = "🔌"
+discharging_symbol = "⚡"
+
+# memory usage
+# [memory_usage]
+# format = "\t\t\t\t\t\t\t\t\t\t$symbol[${ram}]($style) "
+# show_percentage = true
+# show_swap = true
+# threshold = 10
+# style = "bold dimmed white"
+# disabled = false
+

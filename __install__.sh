@@ -2,8 +2,8 @@
 
 # TODO : add automated installation script for the following dotfiles. 
 # TODO : remaining dotfiles to add 
-        # -- bpytop, xmonad + xmobar, compton, 
-        # -- xfce, sddm, plymouth
+      # -- dwm, dmenu, plymouth
+      # -- st, sxiv, vscodium, qutebrowser
 
 # ==> gitconfig
   # path : ~/.gitconfig & ~/.gitignore_global
@@ -25,23 +25,22 @@
 # ==> tmux 
   # path : ~/.tmux.conf
 
-# ==> zsh
-  # path : ~/.zshrc, 
-  # path : ~/.oh-my-zsh/custom/
+# ==> bash 
+  # path : ~/.bashrc 
+  #      : ~/.inputrc, ~/.bash_profile, ~/.config/starship.toml
 
-# ==> starship
-  # path : ~/.config/starship.toml
+# ==> fish
+  # path : ~/.config/fish
 
 # ==> vim
   # path : ~/.vim/*
 
 # ==> neovim
   # path : ~/.config/nvim/*
-  # path : ~/vimwiki/templates/index_template.html
-  # path : ~/viwiki/wiki_html/[css/js]/
 
 # ==> zathura
   # path : ~/.config/zathura/zathurarc
+
 
 
 
