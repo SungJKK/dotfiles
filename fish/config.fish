@@ -23,3 +23,16 @@ source ~/.config/fish/functions/user-functions.fish
 # !! Contents within this block are managed by 'conda init' !!
 eval /home/sung/miniconda3/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
+
+# >>> go gvm >>>
+function gvm
+  bash -c '. ~/.gvm/bin/gvm-init.sh; gvm "$@"' gvm $argv
+end
+
+# >>> haskell ghc >>
+function ghci
+  bash -c '. ~/.ghcup/env; ghci "$@"' $argv 
+end
+function cabal
+  bash -c '~/.ghcup/bin/cabal "$@"' cabal $argv 
+end
