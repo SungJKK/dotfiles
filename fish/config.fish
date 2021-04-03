@@ -30,9 +30,4 @@ function gvm
 end
 
 # >>> haskell ghc >>
-function ghci
-  bash -c '. ~/.ghcup/env; ghci "$@"' $argv 
-end
-function cabal
-  bash -c '~/.ghcup/bin/cabal "$@"' cabal $argv 
-end
+set PATH $PATH ~/.ghcup/bin/
