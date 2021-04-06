@@ -2,6 +2,9 @@
 " Disable folding
 let g:vimwiki_folding = ''
 
+" Disable every .md file being treated as vimwiki
+let g:vimwiki_global_ext = 0
+
 " Using vimwiki syntax
 let g:vimwiki_ext2syntax = {'.wiki': 'markdown'}
 
