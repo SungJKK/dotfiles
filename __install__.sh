@@ -2,8 +2,8 @@
 
 # TODO : add automated installation script for the following dotfiles. 
 # TODO : remaining dotfiles to add 
-      # -- plymouth, xorg, picom, dwm, dmenu
-      # -- st, emacs, firefox
+      # -- plymouth, xorg, picom, dwm, dwm_blocks, dmenu
+      # -- st, newsboat, neomutt, firefox
 
 # ==> gitconfig
   # path : ~/.gitconfig & ~/.gitignore_global
