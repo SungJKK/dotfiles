@@ -9,8 +9,9 @@
   # path : ~/.gitconfig & ~/.gitignore_global
 
 # ==> fonts (JetBrains Mono for terminal, Office Code Pro for regular)
+  # TODO : add fonts for D2Coding (korean), Inconsolata, remove Office Code Pro
   # for terminal : JetBrains Mono
-  # for general : Office Code Pro
+  # for general : Office Code Pro 
   # path : ~/.local/share/fonts/*
 
 # ==> kitty
