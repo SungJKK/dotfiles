@@ -37,6 +37,9 @@
 # ==> neovim
   # path : ~/.config/nvim/*
 
+# ==> taskwarrior
+  # path : ~/.taskrc
+
 # ==> zathura
   # path : ~/.config/zathura/zathurarc
 
