@@ -2,17 +2,15 @@
 
 # TODO : add automated installation script for the following dotfiles. 
 # TODO : remaining dotfiles to add 
-      # -- plymouth, xorg, picom, dwm, dwm_blocks, dmenu
-      # -- st, newsboat, neomutt, firefox
+      # -- plymouth, xorg, picom, dwm, dwm_blocks, dmenu, st
 
 # ==> gitconfig
   # path : ~/.gitconfig & ~/.gitignore_global
 
 # ==> fonts (JetBrains Mono for terminal, Office Code Pro for regular)
   # TODO : add fonts for D2Coding (korean), Inconsolata, remove Office Code Pro
-  # for terminal : JetBrains Mono
-  # for general : Office Code Pro 
   # path : ~/.local/share/fonts/*
+  #       /usr/local/share/fonts/
 
 # ==> kitty
   # path : ~/.config/kitty/kitty.conf

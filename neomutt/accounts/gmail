@@ -1,0 +1,23 @@
+
+# ==> email settings
+set from = "<mail>@gmail.com"
+set realname = "Sung J Kim"
+
+# Imap settings
+set imap_user = "<mail>@gmail.com"
+set imap_pass = "<pwd>"
+
+# Smtp settings
+set smtp_url = "smtps://<mail>@smtp.gmail.com"
+set smtp_pass = "<pwd>"
+
+# Remote gmail folders
+set folder = "imaps://imap.gmail.com/"
+set spoolfile = "+INBOX"
+set postponed = "+[Gmail]/Drafts"
+set record = "+[Gmail]/Sent Mail"
+set trash = "+[Gmail]/Trash"
+
+# instructions to encrypt with gpg
+# $ gpg --list-keys                                         # make sure you set up gpg key
+# $ gpg --recipient <recipient_name> --encrypt ./gmail      # creates file gmail.gpg
