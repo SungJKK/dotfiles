@@ -1,8 +1,6 @@
 #!/bin/bash
-
 # TODO : add automated installation script for the following dotfiles. 
-# TODO : remaining dotfiles to add 
-      # -- plymouth, xorg, picom, dwm, dwm_blocks, dmenu, st
+# TODO : sync install script with README.md
 
 # ==> gitconfig
   # path : ~/.gitconfig & ~/.gitignore_global
@@ -39,6 +37,12 @@
 
 # ==> taskwarrior
   # path : ~/.taskrc
+
+# ==> neomutt
+  # path : ~/.config/neomutt/
+
+# ==> newsboat
+  # path : ~/.newsboat/
 
 # ==> zathura
   # path : ~/.config/zathura/zathurarc

@@ -13,7 +13,7 @@
 ## Introduction 
 personal machine/distro : 
 - thinkpad t460
-- openSUSE TumbleWeed
+- Arch Linux
 
 dotfiles are for the following configurations :
 - gitconfig
