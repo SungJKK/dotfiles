@@ -1,7 +1,7 @@
 
 " Map leader to which_key
 nnoremap <silent> <leader> :silent WhichKey '<Space>'<CR>
-vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
+vnoremap <silent> <leader> silent WhichKeyVisual '<Space>'<CR>
 
 " Define a separator
 let g:which_key_sep = '→'
@@ -45,16 +45,14 @@ let g:which_key_map['h'] = [ '<C-W>s'                     , 'split below' ]
 let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right' ]
 let g:which_key_map[','] = [ ':Emmet'                     , 'emmet'  ]
 let g:which_key_map['g'] = [ ':Goyo'                      , 'goyo' ]
-let g:which_key_map['c'] = [ ':CalendarT'                 , 'open_calendar' ]
 let g:which_key_map['l'] = [ '<Plug>(EasyAlign)'          , 'easy_align' ]
 let g:which_key_map['d'] = [ ':OpenTodo'                  , 'todo' ]
 let g:which_key_map['e'] = [ ':CocCommand explorer'       , 'coc explorer' ]
 let g:which_key_map['a'] = [ ':TagbarToggle'              , 'tagbar' ]
 let g:which_key_map['r'] = [ ':RnvimrToggle'              , 'vim ranger' ]
-let g:which_key_map['t'] = [ ':FloatermToggle'            , 'floatterm' ]
+let g:which_key_map['c'] = [ ':CalendarT'                 , 'open calendar' ]
 
 " Group mappings
-
 let g:which_key_map['p'] = {
       \ 'name' : '+live_preview' ,
       \ 'm' : [ ':MarkdownPreview'     , 'markdown preview' ],
@@ -70,6 +68,32 @@ let g:which_key_map['f'] = {
       \ 'c' : [ ':Colors'                 , 'colorschemes' ],
       \ 'l' : [ ':Lines'                  , 'buffer lines' ],
       \ 't' : [ ':Tags'                   , 'project tags' ]
+      \ }
+
+let g:which_key_map['t'] = {
+      \ 'name' : '+taskwiki',
+      \ 'a' : [ ':TaskWikiAnnotate',        'annotate' ],
+      \ 'b' : {
+            \ 'name' : '+burndown',
+            \ 'd' : [':TaskWikiBurndownDaily',        'daily'],
+            \ 'w' : [':TaskWikiBurndownWeekly',       'weekly'],
+            \ 'm' : [':TaskWikiBurndownMonthly',      'monthly'],
+            \ },
+      \ 'c' : {
+            \ 'name' : '+choose',
+            \ 'p' : [':TaskWikiChooseProject',  'projects'],
+            \ 't' : [':TaskWikiChooseTag',      'tags'],
+            \ },
+      \ 'G' : {
+            \ 'name' : '+graphical_history',
+            \ 'a' : [':TaskWikiGhistoryAnnual'        , 'annual ghistory'],
+            \ 'm' : [':TaskWikiGhistoryMonthly'       , 'monthly ghistory'],
+            \ },
+      \ 'h' : {
+            \ 'name' : '+history',
+            \ 'a' : [':TaskWikihistoryAnnual'        , 'annual history'],
+            \ 'm' : [':TaskWikihistoryMonthly'       , 'monthly history'],
+            \ },
       \ }
 
 let g:which_key_map['w'] = {

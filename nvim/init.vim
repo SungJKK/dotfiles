@@ -4,7 +4,7 @@ source $HOME/.config/nvim/vim-plug/plugins.vim
 " general settings
 source $HOME/.config/nvim/general/paths.vim
 source $HOME/.config/nvim/general/settings.vim
-" source $HOME/.config/nvim/general/terminal.vim        " TODO : setup key bindings and more efficient workflow
+" source $HOME/.config/nvim/general/terminal.vim    " TODO : polish built-in terminal integration
 source $HOME/.config/nvim/keys/mappings.vim     
 
 " syntax settings
@@ -38,8 +38,6 @@ source $HOME/.config/nvim/keys/which-key.vim            " TODO : setup key bindi
 source $HOME/.config/nvim/plug-configs/rainbow-parentheses.vim
 source $HOME/.config/nvim/themes/airline.vim
 source $HOME/.config/nvim/themes/vim-code-dark.vim
-" source $HOME/.config/nvim/themes/one.vim
-" source $HOME/.config/nvim/themes/tokyo-night.vim
-
+" source $HOME/.config/nvim/themes/doom-one.vim
 
 

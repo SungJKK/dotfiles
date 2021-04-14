@@ -42,6 +42,7 @@ call plug#begin('~/.config/nvim/archive-plugins')
     Plug 'junegunn/goyo.vim'
     Plug 'junegunn/limelight.vim'
     Plug 'vimwiki/vimwiki'
+    Plug 'mattn/calendar-vim'
 
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
     Plug 'lervag/vimtex'
@@ -49,10 +50,12 @@ call plug#begin('~/.config/nvim/archive-plugins')
 
     " ==> Task Management
     Plug 'wsdjeg/vim-todo'
+    Plug 'powerman/vim-plugin-AnsiEsc'
+    Plug 'blindFS/vim-taskwarrior'
+    Plug 'tools-life/taskwiki'
 
     " ==> Utilities
     Plug 'mhinz/vim-startify'
-    Plug 'voldikss/vim-floaterm'
     Plug 'liuchengxu/vim-which-key'                             
     Plug 'tpope/vim-surround'                                   
     Plug 'dhruvasagar/vim-table-mode'                           
@@ -63,15 +66,13 @@ call plug#begin('~/.config/nvim/archive-plugins')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
 
-    " ==> Vim Colorschemes
+    " ==> Nvim themes
     Plug 'luochen1990/rainbow'
     Plug 'tomasiser/vim-code-dark'
-    Plug 'rakr/vim-one'
+    Plug 'romgrk/doom-one.vim'
     
-    " ==> Vim Airline
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     
-    " ==> Vim glyphs
     Plug 'kyazdani42/nvim-web-devicons'
 call plug#end()
