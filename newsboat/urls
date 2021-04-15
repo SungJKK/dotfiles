@@ -41,18 +41,14 @@ https://www.reddit.com/r/artificial.rss "reddit" "datascience" "~🌀 (Reddit) A
 https://www.reddit.com/r/MachineLearning.rss "reddit" "datascience" "~🌀 (Reddit) Machine learning"
 
 # Linux
-https://archlinux.org/feeds/news/ "arch_linux" "linux" "~🐧 (Arch linux) News"
-https://wiki.archlinux.org/index.php?title=Special:RecentChanges&feed=rss "arch_linux" "linux" "~🐧 (Arch linux) Recent changes"
-https://archlinux.org/feeds/packages/ "arch_linux" "linux" "~🐧 (Arch linux) Packages"
-https://aur.archlinux.org/rss/ "arch_linux" "linux" "~🐧 (Arch linux) AUR packages"
-
-https://stackoverflow.com/feeds/tag?tagnames=linux&sort=newest "stackoverflow" "linux" "~🐧 (Stackoverflow) Linux"
+https://stackoverflow.com/feeds/tag?tagnames=linux&sort=newest "stackoverflow" "linux" "~🐧 (Stackoverflow) General linux"
+https://stackoverflow.com/feeds/tag?tagnames=nix+or+nixpkgs+or+nixos+or+nixops&sort=newest "stackoverflow" "linux" "~🐧 (Stackoverflow) NixOS"
 https://stackoverflow.com/feeds/tag?tagnames=docker&sort=newest "stackoverflow" "linux" "~🐧 (Stackoverflow) Docker"
 https://stackoverflow.com/feeds/tag?tagnames=kubernetes&sort=newest "stackoverflow" "linux" "~🐧 (Stackoverflow) Kubernetes"
 https://stackoverflow.com/feeds/tag?tagnames=amazon-web-services&sort=newest "stackoverflow" "linux" "~🐧 (Stackoverflow) AWS"
 
-https://www.reddit.com/r/linux.rss "reddit" "linux" "~🐧 (Reddit) Linux"
-https://www.reddit.com/r/archlinux.rss "reddit" "linux" "~🐧 (Reddit) Arch Linux"
+https://www.reddit.com/r/linux.rss "reddit" "linux" "~🐧 (Reddit) General linux"
+https://www.reddit.com/r/NixOS.rss "reddit" "linux" "~🐧 (Reddit) NixOS"
 https://www.reddit.com/r/linuxadmin.rss "reddit" "linux" "~🐧 (Reddit) Linux administration"
 https://www.reddit.com/r/devops.rss "reddit" "linux" "~🐧 (Reddit) DevOps"
 https://www.reddit.com/r/aws.rss "reddit" "linux" "~🐧 (Reddit) AWS"
