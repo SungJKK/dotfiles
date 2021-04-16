@@ -1,6 +1,4 @@
 #!/bin/bash
-# TODO : add automated installation script for the following dotfiles. 
-# TODO : sync install script with README.md
 
 # ==> gitconfig
   # path : ~/.gitconfig & ~/.gitignore_global
