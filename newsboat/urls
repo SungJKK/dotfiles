@@ -42,16 +42,17 @@ https://www.reddit.com/r/MachineLearning.rss "reddit" "datascience" "~🌀 (Redd
 
 # Linux
 https://stackoverflow.com/feeds/tag?tagnames=linux&sort=newest "stackoverflow" "linux" "~🐧 (Stackoverflow) General linux"
-https://stackoverflow.com/feeds/tag?tagnames=nix+or+nixpkgs+or+nixos+or+nixops&sort=newest "stackoverflow" "linux" "~🐧 (Stackoverflow) NixOS"
 https://stackoverflow.com/feeds/tag?tagnames=docker&sort=newest "stackoverflow" "linux" "~🐧 (Stackoverflow) Docker"
 https://stackoverflow.com/feeds/tag?tagnames=kubernetes&sort=newest "stackoverflow" "linux" "~🐧 (Stackoverflow) Kubernetes"
 https://stackoverflow.com/feeds/tag?tagnames=amazon-web-services&sort=newest "stackoverflow" "linux" "~🐧 (Stackoverflow) AWS"
 
 https://www.reddit.com/r/linux.rss "reddit" "linux" "~🐧 (Reddit) General linux"
-https://www.reddit.com/r/NixOS.rss "reddit" "linux" "~🐧 (Reddit) NixOS"
 https://www.reddit.com/r/linuxadmin.rss "reddit" "linux" "~🐧 (Reddit) Linux administration"
 https://www.reddit.com/r/devops.rss "reddit" "linux" "~🐧 (Reddit) DevOps"
 https://www.reddit.com/r/aws.rss "reddit" "linux" "~🐧 (Reddit) AWS"
+
+https://archlinux.org/feeds/news/ "archlinux" "linux" "~🐧 (Arch wiki) Arch news feed"
+https://wiki.archlinux.org/index.php?title=Special:RecentChanges&feed=rss "archlinux" "linux" "~🐧 (Arch wiki) Wiki changes"
 
 # Business, Tech, Future
 https://medium.com/feed/the-mission "medium" "business" "technology" "~🌍 (Medium) The mission"

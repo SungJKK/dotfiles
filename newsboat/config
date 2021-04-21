@@ -62,6 +62,7 @@ browser firefox
 macro , open-in-browser
 macro f set browser "firefox"; open-in-browser ; set browser firefox
 macro w set browser "w3m"; open-in-browser ; set browser firefox
+macro b set browser "qutebrowser"; open-in-browser ; set browser firefox
 # c copies the link to the clipboard.
 macro c set browser "copy(){ echo $1 | xclip ;}; copy "; open-in-browser ; set browser firefox
 
