@@ -8,8 +8,9 @@
 
 # suppress welcome
 set fish_greeting
+set -gx TERM xterm-256color
 
-# fish vim settings
+# fish vim bindings
 set -U fish_key_bindings fish_vi_key_bindings
 set fish_cursor_default underscore blink
 set fish_cursor_insert underscore blink
@@ -17,7 +18,8 @@ set fish_cursor_replace_one blink
 set fish_cursor_visual block blink
 
 # user aliases and functions 
-source ~/.config/fish/functions/user-functions.fish
+source ~/.config/fish/user-functions.fish
+
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

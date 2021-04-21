@@ -1,13 +1,18 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR ZO_CMD:zo
+SETUVAR Z_CMD:z
+SETUVAR Z_DATA:/home/sung/\x2elocal/share/z/data
+SETUVAR Z_DATA_DIR:/home/sung/\x2elocal/share/z
+SETUVAR Z_EXCLUDE:\x5e/home/sung\x24
 SETUVAR __done_allow_nongraphical:1
 SETUVAR __fish_initialized:3100
 SETUVAR _fisher_acomagu_2F_fish_2D_async_2D_prompt_files:/home/sung/\x2econfig/fish/conf\x2ed/__async_prompt\x2efish
 SETUVAR _fisher_danhper_2F_fish_2D_ssh_2D_agent_files:/home/sung/\x2econfig/fish/functions/__ssh_agent_is_started\x2efish\x1e/home/sung/\x2econfig/fish/functions/__ssh_agent_start\x2efish\x1e/home/sung/\x2econfig/fish/conf\x2ed/fish\x2dssh\x2dagent\x2efish
 SETUVAR _fisher_franciscolourenco_2F_done_files:/home/sung/\x2econfig/fish/conf\x2ed/done\x2efish
-SETUVAR _fisher_halostatue_2F_fish_2D_haskell_files:/home/sung/\x2econfig/fish/conf\x2ed/halostatue_fish_haskell\x2efish
+SETUVAR _fisher_jethrokuan_2F_z_files:/home/sung/\x2econfig/fish/functions/__z\x2efish\x1e/home/sung/\x2econfig/fish/functions/__z_add\x2efish\x1e/home/sung/\x2econfig/fish/functions/__z_clean\x2efish\x1e/home/sung/\x2econfig/fish/functions/__z_complete\x2efish\x1e/home/sung/\x2econfig/fish/conf\x2ed/z\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:/home/sung/\x2econfig/fish/functions/fisher\x2efish\x1e/home/sung/\x2econfig/fish/completions/fisher\x2efish
-SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ehalostatue/fish\x2dhaskell\x1eacomagu/fish\x2dasync\x2dprompt\x1efranciscolourenco/done\x1edanhper/fish\x2dssh\x2dagent
+SETUVAR _fisher_plugins:jorgebucaran/fisher\x1eacomagu/fish\x2dasync\x2dprompt\x1efranciscolourenco/done\x1edanhper/fish\x2dssh\x2dagent\x1ejethrokuan/z\x1etakashabe/fish\x2dpeco
 SETUVAR dangerous_colors:000000\x1e333333\x1e666666\x1effffff\x1effff00\x1eff6600\x1eff0000\x1eff0033\x1e3300ff\x1e0000ff\x1e00ffff\x1e00ff00
 SETUVAR dangerous_cursors:\x5c033\x5d12\x3b\x230000ff\x5c007\x1e\x5c033\x5d12\x3b\x23ffff00\x5c007\x1e\x5c033\x5d12\x3b\x23ff0033\x5c007\x1e\x5c033\x5d12\x3b\x233300ff\x5c007
 SETUVAR dangerous_day:000000\x1e333333\x1e666666\x1effffff\x1effff00\x1eff6600\x1eff0000\x1eff0033\x1e3300ff\x1e00aaff\x1e00ffff\x1e00ff00

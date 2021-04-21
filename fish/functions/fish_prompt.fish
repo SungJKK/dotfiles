@@ -42,7 +42,7 @@ set __fish_git_prompt_color_upstream_behind $__slavic_color_lilac
 
 set __fish_git_prompt_char_stateseparator '   '
 set __fish_git_prompt_char_cleanstate ' ✔ '
-set __fish_git_prompt_char_conflictedstate ' !! '
+set __fish_git_prompt_char_conflictedstate ' ! '
 set __fish_git_prompt_char_dirtystate ' ✚ '
 set __fish_git_prompt_char_invalidstate ' ✖ '
 set __fish_git_prompt_char_stagedstate ' ● '

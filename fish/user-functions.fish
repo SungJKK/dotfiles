@@ -37,11 +37,12 @@ alias vim=nvim
 # alias la='ls -al'
 # alias ld='ls --human-readable --size -1 -S --clasify'
 
-# list with colorls
-alias ls='colorls.ruby2.7 --dark --group-directories-first'
-alias ll='colorls.ruby2.7 --dark --group-directories-first -l'
-alias la='colorls.ruby2.7 --dark --group-directories-first -al'
-alias ld='colorls.ruby2.7 --dark --group-directories-first --report --tree --gs'
+# list with exa
+alias ls='exa --icons'
+alias ll='exa --icons --long --all --all'
+alias la='exa --icons --header --long --all --all --group --links --inode --blocks'
+alias lt='exa --icons --long --tree --level=2'
+alias lg='exa --icons --long --group --all --git'
 
 # mkdir show
 alias mkdir='mkdir -pv'
