@@ -50,9 +50,6 @@ call plug#begin('~/.config/nvim/archive-plugins')
 
     " ==> Task Management
     Plug 'wsdjeg/vim-todo'
-    Plug 'powerman/vim-plugin-AnsiEsc'
-    Plug 'blindFS/vim-taskwarrior'
-    Plug 'tools-life/taskwiki'
 
     " ==> Utilities
     Plug 'mhinz/vim-startify'
