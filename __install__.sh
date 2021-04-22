@@ -3,10 +3,8 @@
 # ==> gitconfig
   # path : ~/.gitconfig & ~/.gitignore_global
 
-# ==> fonts (JetBrains Mono for terminal, Office Code Pro for regular)
-  # TODO : add fonts for D2Coding (korean), Inconsolata, remove Office Code Pro
+# ==> fonts 
   # path : ~/.local/share/fonts/*
-  #       /usr/local/share/fonts/
 
 # ==> kitty
   # path : ~/.config/kitty/kitty.conf
