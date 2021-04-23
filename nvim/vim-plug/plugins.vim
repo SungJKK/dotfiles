@@ -67,6 +67,10 @@ call plug#begin('~/.config/nvim/archive-plugins')
     Plug 'luochen1990/rainbow'
     Plug 'tomasiser/vim-code-dark'
     Plug 'romgrk/doom-one.vim'
+    Plug 'Brettm12345/moonlight.vim'
+    Plug 'sonph/onehalf'
+    Plug 'fennerm/my-nord-vim'
+
     
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'

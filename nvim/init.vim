@@ -39,5 +39,8 @@ source $HOME/.config/nvim/plug-configs/rainbow-parentheses.vim
 source $HOME/.config/nvim/themes/airline.vim
 source $HOME/.config/nvim/themes/vim-code-dark.vim
 " source $HOME/.config/nvim/themes/doom-one.vim
+" source $HOME/.config/nvim/themes/moonlight.vim
+" source $HOME/.config/nvim/themes/onehalf.vim
+" source $HOME/.config/nvim/themes/nord.vim
 
 

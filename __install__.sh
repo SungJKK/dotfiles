@@ -31,9 +31,6 @@
 # ==> neovim
   # path : ~/.config/nvim/*
 
-# ==> taskwarrior
-  # path : ~/.taskrc
-
 # ==> neomutt
   # path : ~/.config/neomutt/
 
