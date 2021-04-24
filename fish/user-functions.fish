@@ -39,7 +39,7 @@ alias vim=nvim
 
 # list with exa
 alias ls='exa --icons'
-alias ll='exa --icons --long --all --all'
+alias ll='exa --icons --long --all'
 alias la='exa --icons --header --long --all --all --group --links --inode --blocks'
 alias lt='exa --icons --long --tree --level=2'
 alias lg='exa --icons --long --group --all --git'
