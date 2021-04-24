@@ -32,4 +32,4 @@ function gvm
 end
 
 # >>> haskell ghc >>
-set PATH $PATH ~/.ghcup/bin/
+fish_add_path ~/.ghcup/bin/
