@@ -37,6 +37,10 @@ set t_vb=
 " Set character between vertical window splits
 set fillchars=vert:.
 
+" Disable generating .viminfo file
+let skip_defaults_vim=1
+set viminfo=""
+
 " Cursor mode settings
 let &t_SI.="\e[5 q"   "SI = INSERT mode
 let &t_SR.="\e[4 q"   "SR = REPLACE mode

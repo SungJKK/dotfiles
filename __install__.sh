@@ -3,14 +3,15 @@
 # ==> gitconfig
   # path : ~/.gitconfig & ~/.gitignore_global
 
-# ==> fonts 
+# ==> fonts  
   # path : ~/.local/share/fonts/*
 
 # ==> kitty
-  # path : ~/.config/kitty/kitty.conf
+  # path : ~/.config/kitty/*
 
-# ==> htop
+# ==> tops
   # path : ~/.config/htop/htoprc
+  # path : ~/.config/bashtop/bashtop.cfg
 
 # ==> neofetch
   # path : ~/.config/neofetch/config.conf
@@ -18,18 +19,18 @@
 # ==> tmux 
   # path : ~/.tmux.conf
 
-# ==> bash 
-  # path : ~/.bashrc 
-  #      : ~/.inputrc, ~/.bash_profile, ~/.config/starship.toml
+# ==> zsh   
+  # path : ~/.zshenv
+  #      : ~/.config/zsh/{.zshrc,.zprofile,.p10k.zsh}
 
-# ==> fish
-  # path : ~/.config/fish
-
-# ==> vim
+# ==> vim 
   # path : ~/.vim/*
 
-# ==> neovim
-  # path : ~/.config/nvim/*
+# ==> zathura
+  # path : ~/.config/zathura/zathurarc
+
+# ==> weechat
+  # path : ~/Programs/weechat/
 
 # ==> neomutt
   # path : ~/.config/neomutt/
@@ -37,8 +38,11 @@
 # ==> newsboat
   # path : ~/.newsboat/
 
-# ==> zathura
-  # path : ~/.config/zathura/zathurarc
+# ==> ranger
+  # path : ~/.config/ranger/rc.conf
+
+# ==> neovim
+  # path : ~/.config/nvim/*
 
 
 

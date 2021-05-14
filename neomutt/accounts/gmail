@@ -20,4 +20,5 @@ set trash = "+[Gmail]/Trash"
 
 # instructions to encrypt with gpg
 # $ gpg --list-keys                                         # make sure you set up gpg key
+# $ gpg --full-gen-key
 # $ gpg --recipient <recipient_name> --encrypt ./gmail      # creates file gmail.gpg

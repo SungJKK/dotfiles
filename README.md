@@ -11,7 +11,6 @@ This is my dotfiles for my machine, using :
 ## TODO
 - [ ] Add install script
 - [ ] Add screenshots
-- [ ] Add keybindings in README.md
 
 ## Author
 Sung Joong Kim

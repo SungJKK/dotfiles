@@ -1,6 +1,9 @@
+# enable clipboard
+set selection-clipboard clipboard
+
 # zoom and scroll step size
 set zoom-step 20
-set scroll-step 150
+set scroll-step 150  
 
 # only show filename as window title
 set window-title-basename "true"
