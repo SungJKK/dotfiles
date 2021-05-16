@@ -1,0 +1,211 @@
+####################################
+### installation packages
+####################################
+base
+base-devel
+linux
+linux-firmware
+linux-headers
+btrfs-progs
+
+networkmanager
+network-manager-applet
+dialog
+wpa_supplicant
+
+git
+vim
+
+man-db
+man-pages
+texinfo
+
+refind
+refind-btrfs (aur)
+efibootmgr
+
+snapper
+
+cpu:
+  intel-ucode
+
+gpu:
+  mesa
+  xf86-video-intel
+
+hardware:
+  blueman
+  bluez
+  bluez-utils
+
+  cups
+  hplip
+
+
+
+####################################
+### user packages
+####################################
+system:
+  xdg-user-dirs
+  xdg-utils
+
+  snap-pac-grub (aur)
+  snapper-gui-git (aur)
+
+package:
+  reflector
+  expac
+  pacutils
+
+  yay (aur)
+  paru (aur)
+
+  flatpak
+
+graphical:
+  xorg-server
+  xorg-apps
+  xorg-xinit
+
+  picom
+  nitrogen
+  i3lock-color (aur)
+  dunst
+  rofi
+
+  nm-connection-editor
+
+  xclip
+  clipit (aur)
+
+  polkit
+  lxsession
+
+audio:
+  pipewire
+  pipewire-alsa
+  pipewire-pulse
+  pipewire-jack
+  pavucontrol
+
+input:
+  fcitx
+  fcitx-hangul
+  nerd-fonts-complete
+  ttf-jetbrains-mono
+  ttf-d2coding (aur)
+  noto-fonts-emoji
+
+video:
+  mpv
+
+image:
+  sxiv
+  gimp
+
+browser:
+  firefox
+  w3m
+
+torrent:
+  transmission-cli
+
+power:
+  tlp
+  auto-cpufreq-git (aur)
+  powertop
+  cpupower
+  cpupower-gui (aur)
+  intel-undervolt
+
+security:
+  pass
+
+  firewalld
+
+  nordvpn-bin (aur)
+  tor (remember to disable service)
+  clamav
+  tripwire-git (aur)
+
+misc:
+  zip, unzip
+  cmake
+  openssh
+  curl
+  wget
+  rsync
+
+  shutter
+  gimp
+  libreoffice
+
+virtualization:
+  virt-manager
+  virt-viewer
+  qemu
+  qemu-arch-extra
+  ovmf
+  iptables-nft
+  vde2
+  bridge-utils
+  dnsmasq
+  openbsd-netcat
+
+
+containers:
+  docker
+  k8s
+
+
+####################################
+### productivity packages
+####################################
+programming:
+  python
+  python-pip
+  miniconda (manual download)
+
+  npm
+
+  stack
+
+setup:
+  kitty
+  tmux
+  zsh
+  zsh-completions
+  highlight
+  exa
+  fzf
+  ripgrep
+  ctags
+
+  zathura
+  zathura-djvu
+  zathura-pdf-mupdf
+  mupdf
+
+  htop
+  bashtop
+  neofetch
+
+  weechat
+  newsboat
+  neomutt
+
+  task
+  timew
+
+  ranger
+
+  neovim
+
+personal:
+  spotify (aur)
+  spicetify-cli-git (aur)
+
+  discord
+  slack-desktop (aur)
+
