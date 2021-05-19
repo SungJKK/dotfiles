@@ -70,7 +70,12 @@ graphical:
 
   picom
   nitrogen
-  i3lock-color (aur)
+  betterlockscreen (aur)
+
+  xmonad 
+  xmonad-contrib
+  xmobar
+
   dunst
   rofi
 
