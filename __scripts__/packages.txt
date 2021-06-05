@@ -22,7 +22,7 @@ texinfo
 
 refind
 refind-btrfs (aur)
-efibootmgr
+os-prober
 
 snapper
 
@@ -68,16 +68,14 @@ graphical:
   xorg-apps
   xorg-xinit
 
-  picom
   nitrogen
+  picom
   betterlockscreen (aur)
-
-  xmonad 
-  xmonad-contrib
-  xmobar
-
   dunst
-  rofi
+
+  dwm (manual)
+  dwm_blocks
+  dmenu 
 
   nm-connection-editor
 
@@ -95,11 +93,13 @@ audio:
   pavucontrol
 
 input:
-  fcitx
+  fcitx-im
   fcitx-hangul
+  fcitx-configtool
+
   nerd-fonts-complete
   ttf-jetbrains-mono
-  ttf-d2coding (aur)
+  noto-fonts-cjk
   noto-fonts-emoji
 
 video:
@@ -107,7 +107,6 @@ video:
 
 image:
   sxiv
-  gimp
 
 browser:
   firefox
@@ -118,8 +117,9 @@ torrent:
 
 power:
   tlp
-  auto-cpufreq-git (aur)
   powertop
+  auto-cpufreq-git (aur)
+
   cpupower
   cpupower-gui (aur)
   intel-undervolt
@@ -129,8 +129,7 @@ security:
 
   firewalld
 
-  nordvpn-bin (aur)
-  tor (remember to disable service)
+  tor 
   clamav
   tripwire-git (aur)
 
@@ -142,45 +141,44 @@ misc:
   wget
   rsync
 
+  libreoffice-fresh
+
   shutter
   gimp
-  libreoffice
 
-virtualization:
-  virt-manager
-  virt-viewer
-  qemu
-  qemu-arch-extra
-  ovmf
-  iptables-nft
-  vde2
-  bridge-utils
-  dnsmasq
-  openbsd-netcat
-
+  obs-studio
+  kdenlive
 
 containers:
-  docker
-  k8s
+  docker (manual)
+  k8s (manual)
 
 
 ####################################
 ### productivity packages
 ####################################
 programming:
+  gdb
+
   python
   python-pip
   miniconda (manual download)
 
   npm
+  nvm
 
   stack
+
+utility:
+  tldr
+  cht.sh-git (aur)
 
 setup:
   kitty
   tmux
   zsh
   zsh-completions
+  aws-cli-v2 (aur)
   highlight
   exa
   fzf
@@ -193,7 +191,6 @@ setup:
   mupdf
 
   htop
-  bashtop
   neofetch
 
   weechat
@@ -213,4 +210,5 @@ personal:
 
   discord
   slack-desktop (aur)
+
 
