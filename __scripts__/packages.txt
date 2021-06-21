@@ -70,12 +70,12 @@ graphical:
 
   nitrogen
   picom
-  betterlockscreen (aur)
   dunst
-
-  dwm (manual)
-  dwm_blocks
-  dmenu 
+  
+  plasma
+  kde-applications
+  sddm
+  sddm-kcm
 
   nm-connection-editor
 
@@ -197,8 +197,7 @@ setup:
   newsboat
   neomutt
 
-  task
-  timew
+  unfog-cli-bin (aur)
 
   ranger
 

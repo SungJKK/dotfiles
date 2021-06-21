@@ -1,0 +1,61 @@
+### Settings
+unsetopt BEEP                 # No beeping sounds
+# stty stop undef               # Disable ctrl-s to freeze terminal
+zle_highlight=('past:none')   # Do not highlight paste
+
+# Completion
+autoload -Uz compinit && compinit
+CASE_SENSITIVE="false"
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
+_comp_options+=(globdots)     # Include hidden files
+# source <(kubectl completion zsh)
+
+# Colors
+autoload -Uz colors && colors
+
+# Bettery command history
+setopt EXTENDED_HISTORY          
+setopt SHARE_HISTORY
+setopt APPEND_HISTORY
+setopt HIST_EXPIRE_DUPS_FIRST 
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS      
+setopt HIST_FIND_NO_DUPS
+setopt HIST_REDUCE_BLANKS
+
+# Fzf command history search
+export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git'"
+fzf_history_seach() {
+  BUFFER=$(history -t '%Y-%m-%d %H:%M:%S' 0 | grep -v 1969 | fzf +s +m -x --tac -e -q "$BUFFER" | awk '{print substr($0, index($0, $4))}')
+  zle end-of-line
+}
+autoload fzf_history_seach
+zle -N fzf_history_seach
+bindkey '^f' fzf_history_seach
+
+
+### Vi mode
+# set editing-mode vi           # vi-mode
+
+# From christatmachine
+# bindkey -e will be emacs mode
+bindkey -v
+export KEYTIMEOUT=1
+
+# Change cursor shape for different vi modes.
+function zle-keymap-select () {
+  case $KEYMAP in
+    vicmd) echo -ne '\e[1 q';;      # block
+    viins|main) echo -ne '\e[5 q';; # beam
+  esac
+}
+zle -N zle-keymap-select
+zle-line-init() {
+  zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
+  echo -ne "\e[5 q"
+}
+zle -N zle-line-init
+echo -ne '\e[5 q' # Use beam shape cursor on startup.
+preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
+
+

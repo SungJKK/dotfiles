@@ -2,3 +2,4 @@
 if [[ -f $ZDOTDIR/.zshrc ]]; then
   source $ZDOTDIR/.zshrc
 fi
+

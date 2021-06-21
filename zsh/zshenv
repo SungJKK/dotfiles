@@ -1,14 +1,17 @@
 ### zshenv ###
-export ZDOTDIR=~/.config/zsh
+# Zsh configs directory
+export ZDOTDIR=$HOME/.config/zsh
+
+# Zsh history
 export HISTFILE=~/.zsh_history
 export SAVEHIST=5000000
 export HISTSIZE=5000000
 export HISTFILESIZE=5000000
 export HISTTIMEFORMAT="[%F %T] "
 
+# Default applications
 export LANG=en_US.UTF-8
 export PAGER=less
-export TERM="tmux-256color"
 
 export EDITOR="nvim"
 export TERMINAL="kitty"
@@ -16,11 +19,9 @@ export BROWSER="firefox"
 export READER="zathura"
 export PLAYER="spotify"
 
+# Path variable
 typeset -U PATH path
 path=("$HOME/.local/bin" "$path[@]")
 export PATH
 
-# Use bash instead of zsh in tty
-if [[ ! -z $(tty) ]]; then
-  exec bash -l;
-fi
+
