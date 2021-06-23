@@ -13,16 +13,6 @@ fi
 source $ZDOTDIR/zsh-settings
 source $ZDOTDIR/zsh-aliases
 
-# Fzf command history search
-export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git'"
-fzf_history_seach() {
-  BUFFER=$(history -t '%Y-%m-%d %H:%M:%S' 0 | grep -v 1969 | fzf +s +m -x --tac -e -q "$BUFFER" | awk '{print substr($0, index($0, $4))}')
-  zle end-of-line
-}
-autoload fzf_history_seach
-zle -N fzf_history_seach
-bindkey '^f' fzf_history_seach
-
 
 ### PLUGINS ###
 # Added by Zinit's installer
@@ -83,5 +73,8 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# >>> Haskell ghcup >>>
+[ -f "/home/sung/.ghcup/env" ] && source "/home/sung/.ghcup/env" # ghcup-env
 
 

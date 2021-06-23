@@ -1,213 +1,65 @@
 ####################################
-### installation packages
-####################################
-base
-base-devel
-linux
-linux-firmware
-linux-headers
-btrfs-progs
-
-networkmanager
-network-manager-applet
-dialog
-wpa_supplicant
-
-git
-vim
-
-man-db
-man-pages
-texinfo
-
-refind
-refind-btrfs (aur)
-os-prober
-
-snapper
-
-cpu:
-  intel-ucode
-
-gpu:
-  mesa
-  xf86-video-intel
-
-hardware:
-  blueman
-  bluez
-  bluez-utils
-
-  cups
-  hplip
-
-
-
-####################################
-### user packages
-####################################
-system:
-  xdg-user-dirs
-  xdg-utils
-
-  snap-pac-grub (aur)
-  snapper-gui-git (aur)
-
-package:
-  reflector
-  expac
-  pacutils
-
-  yay (aur)
-  paru (aur)
-
-  flatpak
-
-graphical:
-  xorg-server
-  xorg-apps
-  xorg-xinit
-
-  nitrogen
-  picom
-  dunst
-  
-  plasma
-  kde-applications
-  sddm
-  sddm-kcm
-
-  nm-connection-editor
-
-  xclip
-  clipit (aur)
-
-  polkit
-  lxsession
-
-audio:
-  pipewire
-  pipewire-alsa
-  pipewire-pulse
-  pipewire-jack
-  pavucontrol
-
-input:
-  fcitx-im
-  fcitx-hangul
-  fcitx-configtool
-
-  nerd-fonts-complete
-  ttf-jetbrains-mono
-  noto-fonts-cjk
-  noto-fonts-emoji
-
-video:
-  mpv
-
-image:
-  sxiv
-
-browser:
-  firefox
-  w3m
-
-torrent:
-  transmission-cli
-
-power:
-  tlp
-  powertop
-  auto-cpufreq-git (aur)
-
-  cpupower
-  cpupower-gui (aur)
-  intel-undervolt
-
-security:
-  pass
-
-  firewalld
-
-  tor 
-  clamav
-  tripwire-git (aur)
-
-misc:
-  zip, unzip
-  cmake
-  openssh
-  curl
-  wget
-  rsync
-
-  libreoffice-fresh
-
-  shutter
-  gimp
-
-  obs-studio
-  kdenlive
-
-containers:
-  docker (manual)
-  k8s (manual)
-
-
-####################################
-### productivity packages
+### Coding setup
 ####################################
 programming:
+  cmake
   gdb
 
   python
   python-pip
-  miniconda (manual download)
+  miniconda 
 
-  npm
   nvm
+  npm
+  yarn
 
-  stack
-
-utility:
-  tldr
-  cht.sh-git (aur)
+  ghcup
 
 setup:
   kitty
   tmux
   zsh
   zsh-completions
-  aws-cli-v2 (aur)
+  vim
+  neovim
+  aws-cli-v2 
   highlight
   exa
   fzf
   ripgrep
   ctags
+  lazygit
+  lazydocker
+
+  unfog-cli-bin 
+
+  ranger
+
+  weechat
+  newsboat
+  neomutt
+
+  htop
+  neofetch
+
+containers:
+  docker 
+  k8s 
+
+utility:
+  tldr
+  cht.sh-git (aur)
 
   zathura
   zathura-djvu
   zathura-pdf-mupdf
   mupdf
 
-  htop
-  neofetch
-
-  weechat
-  newsboat
-  neomutt
-
-  unfog-cli-bin (aur)
-
-  ranger
-
-  neovim
-
 personal:
-  spotify (aur)
-  spicetify-cli-git (aur)
-
+  github-desktop
+  slack-desktop 
   discord
-  slack-desktop (aur)
+
+  spotify 
 
 
