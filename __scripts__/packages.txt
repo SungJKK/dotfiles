@@ -2,27 +2,22 @@
 ### Coding setup
 ####################################
 programming:
-  # c / c++
   cmake
   gcc
   gdb
 
-  # lua
   lua
 
-  # go
   gvm
   go
 
-  # python
   python
-  python-pip
+  pip3
+  pyenv
   miniconda 
 
-  # haskell
   ghcup
 
-  # javascript
   nvm
   npm
   yarn

@@ -21,7 +21,7 @@ export PLAYER="spotify"
 
 # Path variable
 typeset -U PATH path
-path=("$HOME/.local/bin" "$path[@]")
+path=("/opt/homebrew/bin" "$path[@]")
 export PATH
 
 

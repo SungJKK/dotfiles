@@ -1,3 +1,10 @@
+
+###################
+# OS X            #
+###################
+.DS_Store
+.localized
+
 ###################
 # Compiled source #
 ###################
@@ -21,7 +28,6 @@ TAGS
 tags
 .tags
 !tags/
-.ctags
 gtags.files
 GTAGS
 GRTAGS
