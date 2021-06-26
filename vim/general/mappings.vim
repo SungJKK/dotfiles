@@ -35,11 +35,26 @@ nnoremap <M-k> :resize +2<CR>
 nnoremap <M-h> :vertical resize -2<CR>
 nnoremap <M-l> :vertical resize +2<CR>
 
-" Toggle NerdTree using <space> + n
-nnoremap <leader>n :NERDTreeToggle<CR>
+" Close current buffer
+nnoremap <S-c> :bp<bar>bd#<CR>
 
 " Show macros with <space> + m
 nnoremap <leader>m  :<c-u><c-r><c-r>='let @'. v:register .' = '. string(getreg(v:register))<cr><c-f><left>
 
+" Toggle NerdTree using <space> + e
+nnoremap <leader>e :NERDTreeToggle<CR>
+
+" Toggle fzf (find files)
+nnoremap <leader>ff :Files<CR>
+
+" Toggle ripgrep (find string)
+nnoremap <leader>fr :Rg<CR>
+
+" Find buffers
+nnoremap <leader>ft :Buffers<CR>
+
+" Lines in current / all buffer
+nnoremap <leader>fc :BLines<CR>
+nnoremap <leader>fb :Lines<CR>
 
 

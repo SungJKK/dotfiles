@@ -1,29 +1,20 @@
 " Specify a directory for plugins
 call plug#begin('~/.vim/archive-plugins')
-  " Utilities
-  Plug 'preservim/nerdtree'
-  Plug 'PhilRunninger/nerdtree-visual-selection'
+  " Basic syntaxsupport
+  Plug 'sheerun/vim-polyglot'
+  Plug 'MTDL9/vim-log-highlighting'
+  Plug 'luochen1990/rainbow'
 
+  " Basic functionality
+  Plug 'preservim/nerdtree'
   Plug 'preservim/nerdcommenter'
   Plug 'tpope/vim-surround'
 
-  Plug 'dhruvasagar/vim-table-mode'
-  Plug 'etdev/vim-hexcolor'
-
-  " Git
-  Plug 'mhinz/vim-signify'
-
-  " Syntax support
-  Plug 'kovetskiy/vim-bash'
-  Plug 'vim-perl/vim-perl'
-  Plug 'sheerun/vim-polyglot'
-
-  Plug 'luochen1990/rainbow'
-  Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
 
   " Vim UI
-  Plug 'NLKNguyen/papercolor-theme'
-  Plug 'tomasiser/vim-code-dark'
+  Plug 'morhetz/gruvbox'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'vim-airline/vim-airline'
 call plug#end()

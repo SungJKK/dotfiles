@@ -1,5 +1,7 @@
 # set neovim as default vim
-alias nn='nvim'
+alias v='vim'
+alias n='nvim'
+alias f='fzf'
 
 man() {
   export LESS_TERMCAP_mb=$'\e[1;33m'
@@ -81,13 +83,7 @@ cd() {
   builtin cd "${DIR}" && ls 
 }
 
-# alias vim='nvim'
-
-alias yeet='paru -Rcs'
+# alias yeet='paru -Rcs'
   # using 'yay' to update, 'yeet' to remove packages lol :)
-
-gc() {
-  command ctags -R -f ./.git/tags . "$@"
-}
 
 

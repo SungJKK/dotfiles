@@ -8,7 +8,7 @@ set encoding=UTF-8                      " The encoding displayed
 set pumheight=10                        " Makes popup menu smaller
 set fileencoding=utf-8                  " The encoding written to file
 set ruler              			        " Show the cursor position all the time
-set nowrap                              " Don't wrap lines
+" set nowrap                              " Don't wrap lines
 set cmdheight=2                         " More space for displaying messages
 set iskeyword+=-                      	" treat dash separated words as a word text object"
 set mouse=a                             " Enable your mouse
@@ -37,14 +37,15 @@ set t_vb=
 " Set character between vertical window splits
 set fillchars=vert:.
 
-" Disable generating .viminfo file
-let skip_defaults_vim=1
-set viminfo=""
-
 " Cursor mode settings
 let &t_SI.="\e[5 q"   "SI = INSERT mode
 let &t_SR.="\e[4 q"   "SR = REPLACE mode
 let &t_EI.="\e[2 q"   "EI = NORMAL mode (ELSE)
+
+" Disable .viminfo file
+let skip_defaults_vim=1
+set viminfo=""
+set viminfofile=NONE
 
 " Set swap files directory
 if !isdirectory($HOME.'/.vim/archive-swap') && exists('*mkdir')

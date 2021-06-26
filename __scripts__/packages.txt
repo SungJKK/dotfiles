@@ -2,18 +2,30 @@
 ### Coding setup
 ####################################
 programming:
+  # c / c++
   cmake
+  gcc
   gdb
 
+  # lua
+  lua
+
+  # go
+  gvm
+  go
+
+  # python
   python
   python-pip
   miniconda 
 
+  # haskell
+  ghcup
+
+  # javascript
   nvm
   npm
   yarn
-
-  ghcup
 
 setup:
   kitty
@@ -22,12 +34,18 @@ setup:
   zsh-completions
   vim
   neovim
+
+  pandoc
+  texlive
+
+  git
+  gh (github-cli)
   aws-cli-v2 
   highlight
   exa
   fzf
   ripgrep
-  ctags
+  universal-ctags
   lazygit
   lazydocker
 
@@ -56,7 +74,6 @@ utility:
   mupdf
 
 personal:
-  github-desktop
   slack-desktop 
   discord
 
