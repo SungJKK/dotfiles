@@ -48,13 +48,13 @@ nnoremap <leader>e :NERDTreeToggle<CR>
 nnoremap <leader>ff :Files<CR>
 
 " Toggle ripgrep (find string)
-nnoremap <leader>fr :Rg<CR>
+nnoremap <leader>ft :Rg<CR>
 
 " Find buffers
-nnoremap <leader>ft :Buffers<CR>
+nnoremap <leader>fb :Buffers<CR>
 
 " Lines in current / all buffer
 nnoremap <leader>fc :BLines<CR>
-nnoremap <leader>fb :Lines<CR>
+nnoremap <leader>fa :Lines<CR>
 
 
