@@ -1,5 +1,5 @@
 ### ZPROFILE ###
-if [[ -f $ZDOTDIR/.zshrc ]]; then
-  source $ZDOTDIR/.zshrc
-fi
 
+# Pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"

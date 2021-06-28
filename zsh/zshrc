@@ -12,6 +12,7 @@ fi
 # Other source files
 source $ZDOTDIR/zsh-settings
 source $ZDOTDIR/zsh-aliases
+source $ZDOTDIR/.iterm2_shell_integration.zsh
 
 
 ### PLUGINS ###
@@ -38,7 +39,6 @@ zinit light-mode for \
 
 # End of Zinit's installer chunk
 
-
 ### User plugins
 zinit ice depth=1
 zinit light romkatv/powerlevel10k
@@ -51,30 +51,43 @@ zinit for \
 
 zinit load greymd/docker-zsh-completion
 
+zinit load jeffreytse/zsh-vi-mode
+
 zinit load Aloxaf/fzf-tab
 zinit load agkozak/zsh-z
 
 ### To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
+### PATH variable
+path=("/opt/homebrew/bin" "/Users/sung/.local/bin" "$path[@]")
+typeset -U PATH path
+export PATH
 
-### PROGRAMMING ###
-# >>> conda initialize >>>
+
+##### PROGRAMMING #####
+### Haskell - Ghcup
+[ -f "/Users/sung/.ghcup/env" ] && source "/Users/sung/.ghcup/env" # ghcup-env
+
+### Go
+
+### Python - Pyenv, Miniconda
+eval "$(pyenv init --path)"
+### 
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/sung/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/sung/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/sung/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+        . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
     else
-        export PATH="/home/sung/miniconda3/bin:$PATH"
+        export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
     fi
 fi
 unset __conda_setup
-# <<< conda initialize <<<
 
-# >>> Haskell ghcup >>>
-[ -f "/home/sung/.ghcup/env" ] && source "/home/sung/.ghcup/env" # ghcup-env
-
-
+### Javascript - NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  

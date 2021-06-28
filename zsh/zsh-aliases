@@ -83,7 +83,5 @@ cd() {
   builtin cd "${DIR}" && ls 
 }
 
-# alias yeet='paru -Rcs'
-  # using 'yay' to update, 'yeet' to remove packages lol :)
 
 

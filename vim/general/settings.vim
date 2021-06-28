@@ -26,7 +26,7 @@ set background=dark                     " tell vim what the background color loo
 set showtabline=2                       " Always show tabs
 set updatetime=300                      " Faster completion
 set timeoutlen=500                      " By default timeoutlen is 1000 ms
-set clipboard=unnamedplus               " Copy paste between vim and everything else
+set clipboard+=unnamedplus               " Copy paste between vim and everything else
 autocmd FileType * set formatoptions-=cro                  " Stop newline continution of comments
 
 " Disable audible & visual bells

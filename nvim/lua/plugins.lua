@@ -73,6 +73,7 @@ return require('packer').startup(function()
   -- Productivity
   use 'jbyuki/nabla.nvim'
   -- use 'vhyrro/neorg' (beta)
+  -- use 'kristijanhusak/orgmode.nvim'
   use 'Pocco81/TrueZen.nvim'
   use 'soywod/unfog.vim'
 

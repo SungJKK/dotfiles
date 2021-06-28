@@ -1,14 +1,10 @@
-####################################
-### Coding setup
-####################################
 programming:
   cmake
   gcc
-  gdb
+  lldb
 
-  lua
+  ghcup  
 
-  gvm
   go
 
   python
@@ -16,10 +12,7 @@ programming:
   pyenv
   miniconda 
 
-  ghcup
-
-  nvm
-  npm
+  node
   yarn
 
 setup:
@@ -30,48 +23,47 @@ setup:
   vim
   neovim
 
-  pandoc
-  texlive
-
   git
-  gh (github-cli)
+  github-cli
   aws-cli-v2 
   highlight
   exa
   fzf
   ripgrep
   universal-ctags
+  ranger
   lazygit
   lazydocker
 
+  pandoc
+  mactex
   unfog-cli-bin 
-
-  ranger
 
   weechat
   newsboat
-  neomutt
 
   htop
   neofetch
 
 containers:
   docker 
-  k8s 
+  kubectl
 
 utility:
+  curl
+  wget
+  urlview
+
   tldr
-  cht.sh-git (aur)
+  cht.sh-git 
 
   zathura
-  zathura-djvu
   zathura-pdf-mupdf
   mupdf
 
 personal:
-  slack-desktop 
+  slack
   discord
-
   spotify 
 
 
