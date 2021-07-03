@@ -2,8 +2,8 @@
 
 ## Introduction 
 This is my dotfiles for my machine, using : 
-- thinkpad t460
-- Arch Linux
+- Thinkpad t460 (Arch linux)
+- Macbook Pro (M1 chip)
 
 ## Feedback 
 [Feedbacks](https://github.com/SungJKK/.dotfiles/issues) are always welcomed!

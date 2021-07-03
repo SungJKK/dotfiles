@@ -7,7 +7,7 @@
 [web]
 	browser = firefox
 [core]
-	excludesFile = ~/.gitignore_global
+	excludesFile = ~/.gitignore
 	editor = nvim
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 	pager = less

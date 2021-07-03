@@ -1,6 +1,6 @@
 programming:
   cmake
-  gcc
+  clang
   lldb
 
   ghcup  

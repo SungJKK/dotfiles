@@ -39,3 +39,6 @@ bindkey '^f' fzf_history_seach
 
 ### Vi mode
 # set editing-mode vi           # vi-mode
+bindkey -v
+
+
