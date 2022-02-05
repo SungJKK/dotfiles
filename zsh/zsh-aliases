@@ -1,7 +1,7 @@
-# set neovim as default vim
 alias v='vim'
 alias n='nvim'
 alias f='fzf'
+alias g='git'
 
 man() {
   export LESS_TERMCAP_mb=$'\e[1;33m'
@@ -18,25 +18,22 @@ man() {
   command man "$@"
 }
 
-alias diff='diff --color=auto'
-
 alias grep='grep --color=auto'
 
 alias ip='ip --color=auto'
 
-alias ccat='highlight --out-format=ansi'
+alias cat='highlight --out-format=ansi'
 
 # alias ls='ls -hN --color=auto --group-directories-first'
 # alias ll='ls -l'
 # alias la='ls -al'
 # alias lt='ls --human-readable --size -l -S --classify'
-  # show files by size
-  # in OSX : lt='du -sh * | sort -h'
 alias ls='exa --icons'
 alias ll='exa --icons --long'
-alias la='exa --icons --header --long --all --all --group --links --inode --blocks'
+alias la='exa --icons --header --long --all --group --links --inode --blocks'
 alias lt='exa --icons --long --tree --level=2'
 alias lg='exa --icons --long --group --all --git'
+alias lf='du -sh * | sort -h'   # Only OSX. Show file by size
 
 # alias mkdir='mkdir -pv'
 mkdir() {

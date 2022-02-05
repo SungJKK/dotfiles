@@ -17,6 +17,8 @@
 	tool = vimdiff
 [color]
 	ui = auto
+[init]
+	defaultBranch = main
 
 ## aliases ##
 #############

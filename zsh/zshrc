@@ -2,73 +2,58 @@
 ### If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-### Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # Other source files
 source $ZDOTDIR/zsh-settings
 source $ZDOTDIR/zsh-aliases
 source $ZDOTDIR/.iterm2_shell_integration.zsh
 
 
-### PLUGINS ###
-# Added by Zinit's installer
-if [[ ! -f $HOME/.config/zsh/.zinit/bin/zinit.zsh ]]; then
+### PLUGINS using Zinit ###
+# Commands:
+#       zinit self-update
+#       zinit update
+
+ZINIT_HOME="${ZDOTDIR}/.zinit"
+if [[ ! -f $ZINIT_HOME/zinit.zsh ]]; then
     print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
-    command mkdir -p "$HOME/.config/zsh/.zinit" && command chmod g-rwX "$HOME/.config/zsh/.zinit"
-    command git clone https://github.com/zdharma/zinit "$HOME/.config/zsh/.zinit/bin" && \
+    command mkdir -p "$ZINIT_HOME" && command chmod g-rwX "$ZINIT_HOME"
+    command git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME" && \
         print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
         print -P "%F{160}▓▒░ The clone has failed.%f%b"
 fi
 
-source "$HOME/.config/zsh/.zinit/bin/zinit.zsh"
+source "${ZINIT_HOME}/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
-
-# Load a few important annexes, without Turbo
-# (this is currently required for annexes)
-zinit light-mode for \
-    zinit-zsh/z-a-rust \
-    zinit-zsh/z-a-as-monitor \
-    zinit-zsh/z-a-patch-dl \
-    zinit-zsh/z-a-bin-gem-node
-
-# End of Zinit's installer chunk
+### End of Zinit installer's chunk
 
 ### User plugins
-zinit ice depth=1
-zinit light romkatv/powerlevel10k
+# Load a few important annexes, without turbo 
+zinit light-mode for \
+    zdharma-continuum/zinit-annex-patch-dl \
+    zdharma-continuum/zinit-annex-submods \
+    zdharma-continuum/zinit-annex-man
 
-zinit for \
-  light-mode zsh-users/zsh-completions \
-  light-mode zsh-users/zsh-autosuggestions \
-  light-mode zsh-users/zsh-history-substring-search \
-  light-mode zdharma/fast-syntax-highlighting 
+zinit ice silent wait atload:_zsh_autosuggest_start
+zinit light zsh-users/zsh-autosuggestions
 
-zinit load greymd/docker-zsh-completion
+zinit ice blockf
+zinit light zsh-users/zsh-completions
+zinit light greymd/docker-zsh-completion
+zinit light agkozak/zsh-z
 
-zinit load jeffreytse/zsh-vi-mode
-
-zinit load Aloxaf/fzf-tab
-zinit load agkozak/zsh-z
-
-### To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
-[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+zinit ice silent wait!1 atload"ZINIT[COMPINIT_OPTS]=-C; zpcompinit"
+zinit light zdharma-continuum/fast-syntax-highlighting
+zinit light Aloxaf/fzf-tab
 
 
 ##### PROGRAMMING #####
+# Rust, Go
+
 ### Haskell - Ghcup
 [ -f "/Users/sung/.ghcup/env" ] && source "/Users/sung/.ghcup/env" # ghcup-env
 
-### Go
-
-### Python - Pyenv, Miniconda
-eval "$(pyenv init --path)"
-### 
+### Python - Conda
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
@@ -81,14 +66,22 @@ else
     fi
 fi
 unset __conda_setup
+# conda config --set auto_activate_base False
+# conda config --set changeps1 False
 
 ### Javascript - NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  
 
+
+
 ### PATH variable
-path=("/opt/homebrew/bin" "/Users/sung/.local/bin" "$path[@]")
+path=("/opt/homebrew/bin" "/Users/sung/.local/bin" "/Users/sung/.cargo/bin" "/Applications/Firefox.app/Contents/MacOS" "$path[@]")
 typeset -U PATH path
 export PATH
 
+### Starship prompt
+eval "$(starship init zsh)"
+
+echo -ne '\e[3 q'

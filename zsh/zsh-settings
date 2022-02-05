@@ -1,8 +1,4 @@
 ### Settings
-unsetopt BEEP                 # No beeping sounds
-# stty stop undef               # Disable ctrl-s to freeze terminal
-zle_highlight=('past:none')   # Do not highlight paste
-
 # Completion
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
@@ -16,18 +12,46 @@ complete -C '/usr/local/bin/aws_completer' aws
 # Colors
 autoload -Uz colors && colors
 
-# Bettery command history
-setopt EXTENDED_HISTORY          
-setopt SHARE_HISTORY
-setopt APPEND_HISTORY
-setopt HIST_EXPIRE_DUPS_FIRST 
-setopt HIST_IGNORE_DUPS
-setopt HIST_IGNORE_ALL_DUPS      
-setopt HIST_FIND_NO_DUPS
-setopt HIST_REDUCE_BLANKS
+# OPTIONS
+# save each command's beginning timestamp and the duration to the history file
+setopt extended_history          
+setopt share_history
+# this is default, but set for share_history
+setopt append_history
+setopt hist_expire_dups_first 
+setopt hist_ignore_dups
+# Remove duplicates from history
+setopt histignorealldups
+setopt hist_find_no_dups
+setopt hist_reduce_blanks
 
-# Fzf command history search
-export FZF_DEFAULT_COMMAND="rg --files --smart-case --hidden --follow --glob '!.git'"
+# no beeping sounds
+setopt nobeep
+# no c-s/c-q output freezing
+setopt noflowcontrol
+# allow expansion in prompts
+setopt prompt_subst
+# display PID when suspending processes as well
+setopt longlistjobs
+# try to avoid the 'zsh: no matches found...'
+setopt nonomatch
+# report the status of backgrounds jobs immediately
+setopt notify
+# whenever a command completion is attempted, make sure the entire command path
+# is hashed first.
+setopt hash_list_all
+# not just at the end
+setopt completeinword
+# use zsh style word splitting
+setopt noshwordsplit
+# allow use of comments in interactive code
+setopt interactivecomments
+# Don't send SIGHUP to background processes when the shell exits.
+setopt nohup
+# don't push the same dir twice.
+setopt pushd_ignore_dups
+
+## Custom Fzf history
 fzf_history_seach() {
   BUFFER=$(history -t '%Y-%m-%d %H:%M:%S' 0 | grep -v 1969 | fzf +s +m -x --tac -e -q "$BUFFER" | awk '{print substr($0, index($0, $4))}')
   zle end-of-line
@@ -37,8 +61,22 @@ zle -N fzf_history_seach
 bindkey '^f' fzf_history_seach
 
 
-### Vi mode
-# set editing-mode vi           # vi-mode
-bindkey -v
+## Plugin configs
+zstyle ':completion:*' menu select
 
+# ------ fzf-tab
+# Show preview for cd completion
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always --long --icons $realpath'
+# Show preview for kill / ps completion
+zstyle ':completion:*:*:*:*:processes' command "ps -u $USER -o pid,user,comm -w -w"
+zstyle ':fzf-tab:complete:(kill|ps):argument-rest' fzf-preview \
+    '[[ $group == "[process ID]" ]] && ps --pid=$word -o cmd --no-headers -w -w'
+zstyle ':fzf-tab:complete:(kill|ps):argument-rest' fzf-flags --preview-window=down:3:wrap
+# Show systemd unit status
+zstyle ':fzf-tab:complete:systemctl-*:*' fzf-preview 'SYSTEMD_COLORS=1 systemctl status $word'
+# Show environment variables
+zstyle ':fzf-tab:complete:(-command-|-parameter-|-brace-parameter-|export|unset|expand):*' \
+	fzf-preview 'echo ${(P)word}'
 
+# ------ zsh-autosuggestions
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#585858"

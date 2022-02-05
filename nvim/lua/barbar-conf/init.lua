@@ -2,8 +2,8 @@
 vim.api.nvim_set_keymap('n', '<TAB>', ':BufferNext<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<S-TAB>', ':BufferPrevious<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<S-c>', ':BufferClose<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<A-h>', ':BufferMovePrev<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<A-l>', ':BufferMoveNext<cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<S-h>', ':BufferMovePrev<cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<S-l>', ':BufferMoveNext<cr>', { noremap = true, silent = true })
 
 -- Settings
 -- TODO: In lua config?
