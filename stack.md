@@ -17,8 +17,8 @@ aws_cli_v2, aws-vault
 # Neovim
 git, gh-cli
 curl, wget, unzip, tar, gzip
-nvm, yarn, npm, node (=> eslint, eslint_d, prettier, prettier_d_slim)
-conda, pip3, python3 (=> black, flake8)
+nvm, yarn, npm, node (=> prettier)
+conda, pip3, python3 (=> black)
 ghcup (=> ghc, stack, cabal, hls, floskell) 
 cmake, clang (=> clangd, clang-format)
 
@@ -26,7 +26,7 @@ rustup (=> rust, cargo, stylua)
 go
 perl
 
-fzf, rg, fd (find), lazygit
+jq, fzf, rg, fd (find), lazygit
 
 dictd, dict-wn, dict-moby-thesaurus
 
