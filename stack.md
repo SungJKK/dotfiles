@@ -1,17 +1,17 @@
-# Stack 
-iterm2, tmux, zsh (+ starship),
-neovim, vscodium, zathura
-discord, slack, spotify, firefox
-
-nerdfont, 
-exa, highlight, rsync
-bpytop, ranger, newsboat
-
-
 # Development
+iterm2
+tmux, zsh (+ starship), neovim
+vscodium, zathura
+discord, slack
+spotify, firefox
+
 docker, k3d, kubernetes, helm
 ansible, terraform
 aws_cli_v2, aws-vault 
+
+nerdfont, 
+exa, highlight, rsync
+htop, ranger, newsboat
 
 
 # Neovim
