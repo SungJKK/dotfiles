@@ -19,6 +19,7 @@
 # [}} ](bold 105)
 #    [└─](bold 105)$jobs[ λ ](bold red)
 # """
+
 format = """
 [  ](bold 105)$username$hostname$directory\
 $git_branch\
@@ -45,6 +46,7 @@ $terraform\
 $aws
 """
 
+command_timeout = 600
 add_newline = true
 continuation_prompt = "   ▶▶ "
 
