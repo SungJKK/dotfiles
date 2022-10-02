@@ -67,6 +67,7 @@ highlight
 exa
 tree
 duf
+diff-so-fancy
 
 powertop
 htop
