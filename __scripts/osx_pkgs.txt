@@ -1,0 +1,40 @@
+kitty / iterm2
+
+mactex
+appcleaner
+keka
+
+alttab
+raycast
+amphetamine
+utorrent-web
+
+
+
+#########################
+# gui_software
+#########################
+vlc (video)
+
+spotify (aur)
+spicetify-cli-git (aur)
+
+firefox
+tor 
+
+tableau-public
+imsonia (rest client)
+figma
+
+libre-office
+zotero
+obsidian
+ticktick
+
+thunderbird
+discord
+slack
+
+gimp
+obs-studio
+kdenlive

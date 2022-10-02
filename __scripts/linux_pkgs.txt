@@ -1,0 +1,333 @@
+#########################
+# system
+#########################
+xorg-server
+xorg-apps
+xorg-xinit
+
+sddm (remove if using better_lockscreen)
+sddm-kcm
+plasma
+kde-applications 
+polkit
+
+better_lockscreen
+picom 
+i3-gaps 
+polybar
+nitrogen
+rofi 
+eww
+dunst
+
+fontconfig 
+nerd-fonts-complete
+ttf-jetbrains-mono
+font-iosevka-nerd-font
+font-iosevka-ss04
+noto-fonts-cjk
+noto-fonts-emoji
+
+
+#########################
+# setup
+#########################
+kitty 
+
+tmux
+
+bash
+fish 
+    fisher
+    fish-async-prompt (if u customize tide prompt, it is already async, so no need for this)
+    z
+    fzf.fish
+    done
+    autopair.fish
+    nvm.fish
+    tldr
+    navi
+    colored_man_pages.fish
+    bass
+
+sed & awk & grep 
+rg (ripgrep)
+ag (the silver searcher)
+fzf
+fd 
+jq
+
+man-db
+man-pages (after installing the 2, run the mandb command)
+tldr
+cheat.sh 
+
+bat
+highlight
+exa
+tree
+duf
+
+powertop
+htop
+neofetch
+
+newsboat
+
+nnn (cli file browser)
+
+vim
+neovim
+vscodium
+
+git
+gh-cli
+lazygit
+
+pandoc 
+TexLive / MacTex
+
+license (for generating software licenses)
+
+zip, unzip, gzip
+tar 
+curl
+wget
+
+ping 
+traceroute 
+ip (instead of deprecated ifconfig)
+ip n (instead of arp)
+ip tunnel (instead of iptunnel)
+ip link (instead of nameif)
+ip route (instead of route)
+nmap
+netcat
+bluecat (netcat for bluetooth)
+nftables (firewall; instead of ufw or iptables)
+
+gnupg2
+openssh
+sftp
+rsync
+
+openssl
+openVpn
+rtorrent
+
+pass (password)
+
+rmlint (system cleaner)
+
+mpd  (music)
+ncmpcpp
+ffmpeg (audio / video converter)
+
+ventoy (usb)
+
+
+#########################
+# Programming & Neovim
+#########################
+c / c++
+    gcc / g++ 
+    gdb 
+    clang (=> clangd, clang-format, lldb)
+    make, cmake
+    cppman
+
+haskell
+    ghcup (=> ghc, cabal, hls, floskell) 
+
+python
+    pyenv (manage python versions)
+    pip3
+    miniconda 
+    poetry
+    pip3, python3 (=> black)
+
+typescript & javascript
+    nvm
+    node 
+    yarn
+    npm
+    (=> prettier)
+
+rust
+    rustup (=> rust, cargo, stylua)
+go
+perl
+lua
+
+SETUP
+    - pip3 install pynvim
+    - npm i -g neovim
+
+LSP
+    - cargo install asm-lsp
+
+    - lua: https://github.com/sumneko/lua-language-server
+    - clangd: 
+    - pip install cmake-language-server
+    - hls: https://github.com/haskell/haskell-language-server
+
+    - npm i -g bash-language-server
+    - npm i -g vscode-langservers-extracted
+    - npm i -g yaml-language-server
+    - npm i -g @ansible/ansible-language-server
+    - npm i -g dockerfile-language-server-nodejs
+    - npm i -g typescript typescript-language-server
+    - npm i -g pyright
+
+
+
+#########################
+# databases
+#########################
+postgresql
+pg-cli
+pgAdmin4
+
+mongodb
+mongo (javascript shell)
+
+
+#########################
+# containers
+#########################
+docker 
+kubectl + helm
+k3d
+
+aws-cli-v2 
+aws-vault
+awless
+
+terraform (creating aws infranstructure)
+ansible (provisioning & managing cloud actions)
+
+
+
+#########################
+# gui_software
+#########################
+zathura
+zathura-djvu
+zathura-pdf-mupdf
+mupdf
+
+feh (image)
+vlc (video)
+
+spotify (aur)
+spicetify-cli-git (aur)
+
+firefox
+tor 
+
+tableau-public
+imsonia (rest client)
+figma
+
+libre-office
+zotero
+obsidian
+ticktick
+
+thunderbird
+discord
+slack
+
+gimp
+obs-studio
+kdenlive
+
+
+
+####################################
+### linux system packages
+####################################
+environment:
+    refind
+    os-prober
+    zfs
+    zfsBootmenu
+
+
+package:
+    reflector
+    expac
+    pacutils
+    pacFinder (gui)
+
+    yay (aur)
+    paru (aur)
+    flatpak
+
+    pacfinder
+
+
+graphical:
+    xdg-user-dirs
+    xdg-utils
+    xdg-ninja
+
+    xclip
+    clipit (aur)
+
+    libreoffice-fresh
+    shutter
+
+
+audio:
+    pipewire
+    pipewire-alsa
+    pipewire-pulse
+    pipewire-jack
+    pavucontrol
+
+input:
+    fcitx-im
+    fcitx-hangul
+    fcitx-configtool
+
+
+
+system:
+    base
+    base-devel
+    linux
+    linux-firmware
+    linux-headers
+
+    wpa_supplicant + systemd-networkd + systemd-resolved
+    networkmanager + network-manager-applet
+    nm-connection-editor
+
+    dialog
+
+cpu:
+    intel-ucode
+
+gpu:
+    mesa
+    xf86-video-intel
+
+hardware:
+    blueman
+    bluez
+    bluez-utils
+
+    cups
+    hplip
+
+power:
+    tlp
+    powertop
+    auto-cpufreq-git (aur)
+
+    cpupower
+    cpupower-gui (aur)
+    intel-undervolt
+
+

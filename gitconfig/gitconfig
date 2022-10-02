@@ -19,6 +19,8 @@
 	ui = auto
 [init]
 	defaultBranch = main
+# [credential]
+#     helper = osxkeychain
 
 ## aliases ##
 #############

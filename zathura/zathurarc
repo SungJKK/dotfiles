@@ -8,9 +8,6 @@ set scroll-step 150
 # only show filename as window title
 set window-title-basename "true"
 
-# copy selection to system clipboard
-set selection-clipboard "clipboard"
-
 # enable incremental search
 set incremental-search true
 
