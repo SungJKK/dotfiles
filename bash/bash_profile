@@ -1,0 +1,18 @@
+# Profile file that runs on login.
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export EDITOR="vim"
+export TERMINAL="kitty"
+export BROWSER="firefox"
+export READER="zathura"
+export PLAYER="ncpm"
+
+# Path for custom scripts
+export PATH="$PATH:$HOME/scripts" 
+
+# case insensitive autocompletion
+bind "set completion-ignore-case on"
+
+
+
+

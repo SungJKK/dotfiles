@@ -1,7 +1,6 @@
 #### Put user aliases & abbreviations here
 
 ### Aliases 
-# set default vim to neovim
 alias v 'vim'
 alias n 'nvim'
 alias c 'code'
@@ -37,19 +36,11 @@ alias cat 'bat'
 
 alias df 'duf --sort size'
 
-# function ls
-#   command ls -hN --color=auto --group-directories-first $argv
-# end
-# alias ll='ls -l'
-# alias la='ls -al'
-# alias lt='ls --human-readable --size -l -S --classify'
-# alias diff='diff --color=auto $argv'
-# alias grep='grep --color=auto $argv'
-# alias df='df -h'
-
-
 
 ### Abbreviations 
+abbr --add --global lman 'man $(find /usr/share/man/man1 -type f | shuf | head -1)'
+  # generate random man pages to learn about linux 
+
 abbr --add --global last 'exa --icons --long --sort=modified'
 abbr --add --global lf 'du -sh * | sort -h'   # Only OSX. Show file by size
 
@@ -70,7 +61,14 @@ abbr --add --global cpv 'rsync -ah --info=progress2'
 
 # safely remove files
 abbr --add --global rmf 'rm -rfI'
-abbr --add --global rms 'mv --force -t ~/.local/share/Trash/files'
+function rms 
+    # TODO: create cron job to clean Trash every interval
+    if not test -d ~/.local/share/Trash
+        mkdir ~/.local/share/Trash
+    end
+
+    mv --force $argv ~/.local/share/Trash
+end
 
 # find out whats running on port X
 abbr --add --global port 'lsof -i'
@@ -78,9 +76,7 @@ abbr --add --global port 'lsof -i'
 # Better find
 abbr --add --global find 'fd'
 
-# show processes
-abbr --add --global paux 'ps aux | less'
 # Better ps
-# abbr --add --global ps 'procs'
+abbr --add --global ps 'procs'
 
 

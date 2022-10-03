@@ -13,6 +13,9 @@ if status is-interactive
     set fish_cursor_insert underscore blink
     set fish_cursor_replace_one blink
     set fish_cursor_visual block blink
+
+    # TODO: accept auto-suggestion with ctrl+f (not working in tmux)
+    bind \cF accept-autosuggestion
 end
 
 

@@ -1,67 +1,22 @@
-# when spawning from fish, spawn w/ custom bashrc:
-# bash --rcfile ./project/bashrc
-
-###################
-# ~/.bash_profile
-###################
-#!/bin/sh 
-[ -f ~/.bashrc ] && source ~/.bashrc 
-
-# Profile file that runs on login.
-export PATH="$PATH:$HOME/scripts" # TODO: move this to fish
-export LANG=en_US.UTF-8
-export EDITOR="vim"
-export TERMINAL="kitty"
-export BROWSER="firefox"
-export READER="zathura"
-export PLAYER="spotify"
-
-# case insensitive autocompletion
-bind "set completion-ignore-case on"
-
-
-
-
-###################
-# ~/.bashrc 
-###################
-# Sample .bashrc for SUSE Linux
-# Copyright (c) SUSE Software Solutions Germany GmbH
-
-# There are 3 different types of shells in bash: the login shell, normal shell
-# and interactive shell. Login shells read ~/.profile and interactive shells
-# read ~/.bashrc; in our setup, /etc/profile sources ~/.bashrc - thus all
-# settings made here will also take effect in a login shell.
-#
-# NOTE: It is recommended to make language settings in ~/.profile rather than
-# here, since multilingual X sessions would not work properly if LANG is over-
-# ridden in every subshell.
-
-test -s ~/.alias && . ~/.alias || true
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
 ##### ==> Custom settings
-# ==> disable ctrl-s and ctrl-q 
+# disable ctrl-s and ctrl-q 
 stty -ixon 
 
-# ==> vi mode 
+# vi mode 
 set -o vi
 
-# ==> bettery history 
-shopt -s histappend 
-HISTCONTROL=ignoredups
-HISTFILESIZE=10000
-HISTSIZE=10000
+# bettery history 
+# shopt -s histappend 
+# HISTCONTROL=ignoredups
+# HISTFILESIZE=10000
+# HISTSIZE=10000
+
+# disable history
+unset HISTFILE
+
 
 # ==> Aliases : You can check aliases with  $ alias
-# ==> adding colors 
-alias diff='diff --color=auto'
-alias grep='grep --color=auto'
-alias ip='ip --color=auto'
-alias ls='ls -hN --color=auto --group-directories-first'
-alias ccat='highlight --out-format=ansi'
-
+# better output
 function man() {
   export LESS_TERMCAP_mb=$'\e[1;33m'
   export LESS_TERMCAP_md=$'\e[1;33m'
@@ -77,65 +32,37 @@ function man() {
   command man "$@"
 }
 
+alias diff='diff --color=auto'
+alias grep='grep --color=auto'
+alias ip='ip --color=auto'
+
+alias ls='ls -hN --color=auto --group-directories-first'
+
+alias diff='diff --color=auto $argv'
+
+alias grep='grep --color=auto $argv'
+
+alias df='df -h'
+
+
 # ==> user aliases
-alias vim='nvim'
-  # set default editor to neovim
+alias v='vim'
+alias n='nvim'
+alias c='code'
+alias f='fzf'
+alias g='git'
 
 alias lman='man $(find /usr/share/man/man1 -type f | shuf | head -1)'
   # generate random man pages to learn about linux 
 
-alias gc='ctags -R -f ./.git/tags .'
-  # generate ctags, and put them inside .git folder
-
 alias ll='ls -l'
-alias la='ls -la'
-  # list 
-alias lt='ls --human-readable --size -1 -S --classify'
+alias la='ls -al'
+  # show dotfiles only
+alias lt='ls --human-readable --size -l -S --classify'
   # show files by file sizes
   # in macOS : alias lt='du -sh * | sort -h'
-
-alias l.='ls -d .*'
-alias ll.='ls -ld .*'
-  # show dotfiles only
-
-# create directory recursively
-alias mkdir='mkdir -pv'
-
-# view only mounted devices
-alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | grep -E /dev/ | sort"
-  # in macOS : alias mnt='mount | grep -E ^/dev | column -t'
-
-# make mount more readable
-alias mount='mount | column -t'
-
-# find command in history
-alias gh='history | grep'
-
-# last files edited
-alias left='ls -t -1'
-
-# count files 
-alias count='find . -type f | wc -l'
-
-# copy using rsync. 
-# Rsync is good for copying files both locally and remotely.
-alias cpv='rsync -ah --info=progress2'
-
-# safely remove files
-alias rm='rm -i'
-alias rms='mv --force -t ~/.local/share/Trash/files'
-  # TODO : create script to clean Trash files directory periodically.
-alias rmf='rm -rf'
-  # force remove all files
-
-# resume wget by default
-alias wget='wget -c'
-
-# show processes
-alias paux='ps aux | less'
-
-# exit command like vim
-alias :q='exit'
+alias lh='ls -t -1'
+    # last files edited
 
 # change directory, and show contents
 function cd() {
@@ -148,6 +75,50 @@ function cd() {
   ls -F 
 }
 
+# create directory recursively
+alias mkdir='mkdir -pv'
+
+# safely remove files
+alias rm='rm -I'
+alias rmf='rm -rfI'
+function rms() {
+    # TODO: create cron job to clean Trash every interval
+    [ ! -d ~/.local/share/Trash ] && mkdir ~/.local/share/Trash
+
+    mv --force "$@" ~/.local/share/Trash
+}
+
+# view only mounted devices
+alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | grep -E /dev/ | sort"
+  # in macOS : alias mnt='mount | grep -E ^/dev | column -t'
+
+# make mount more readable
+alias mount='mount | column -t'
+
+# find command in history
+alias h='history | grep'
+alias hg='history | grep'
+alias hgi='history | grep -i'
+
+# count files 
+alias count='find . -type f | wc -l'
+
+# find out whats running on port X
+alias port='lsof -i'
+
+# copy using rsync. 
+# Rsync is good for copying files both locally and remotely.
+alias cpv='rsync -ah --info=progress2'
+
+# resume wget by default
+alias wget='wget -c'
+
+# show processes
+alias paux='ps aux | less'
+
+
 # ==> prompt settings 
 PS1="\n \[\033[0;34m\]┌─||\[\033[1;31m\]\t\[\033[1;37m\], \j ⇄ , \[\033[1;33m\]\w\[\033[0;34m\]|| \n └─||─▶ \[\033[1;36m\]\$ \[\033[0m\]"
+
+
 

@@ -1,6 +1,7 @@
 ### Environment variables
 set -gx TERM xterm-256color
 set -gx LANG en_US.UTF-8
+set -gx LC_ALL en_US.UTF-8
 
 ### Default applications
 set -gx PAGER less
@@ -56,6 +57,8 @@ set -gx PLAYER spotify
  
  
 # ### PATH variable
+# export PATH="$PATH:$HOME/scripts" 
+
 # path=("/opt/homebrew/bin" "/Users/sung/.local/bin" "/Users/sung/.cargo/bin" "/Applications/Firefox.app/Contents/MacOS" "$HOME/.emacs.d/bin" "$path[@]")
 # typeset -U PATH path
 # export PATH
