@@ -10,6 +10,7 @@ amphetamine
 utorrent-web
 
 
+terminal-notifier (for fish-done plugin notifications)
 
 #########################
 # gui_software

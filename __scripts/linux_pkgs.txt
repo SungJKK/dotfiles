@@ -1,32 +1,70 @@
 #########################
-# system
+# Endeavour OS 
 #########################
-xorg-server
-xorg-apps
-xorg-xinit
+power:
+    tlp
+    powertop
+    auto-cpufreq-git (aur)
 
-sddm (remove if using better_lockscreen)
-sddm-kcm
-plasma
-kde-applications 
-polkit
+    cpupower
+    cpupower-gui (aur)
+    intel-undervolt
 
-better_lockscreen
-picom 
-i3-gaps 
-polybar
-nitrogen
-rofi 
-eww
-dunst
+keyboard input:
+    fcitx5
+    fcitx5-im
+    fcitx5-hangul
+    fcitx5-configtool (gui)
+    fcitx5-gtk 
+    fcitx5-qt
 
-fontconfig 
-nerd-fonts-complete
-ttf-jetbrains-mono
-font-iosevka-nerd-font
-font-iosevka-ss04
-noto-fonts-cjk
-noto-fonts-emoji
+    fontconfig 
+    noto-fonts
+    noto-fonts-cjk
+    noto-fonts-emoji
+    adobe-source-han-sans-kr-fonts
+    nerd-fonts-complete (jetbrains, iosevka)
+
+package:
+    reflector
+    expac
+    pacutils
+
+    yay 
+    flatpak
+    pacfinder (gui)
+
+graphical:
+    xdg-utils
+    xdg-ninja
+
+    archlinux-tweak-tool-git
+    lxappearance (gtk)
+    kvantum (qt)
+    qt5ct 
+
+    sddm
+    wlogout 
+    swaylock-effects
+
+    wayland 
+    xorg-xwayland 
+    xorg-xlsclients 
+    qt5-wayland 
+    qlfw-wayland
+
+    hyprland 
+    waybar 
+    eww
+    swww (wallpaper background)
+
+    wofi
+    dunst
+    clipman
+    thunar
+
+    mvi (image)
+    mpv (video)
 
 
 #########################
@@ -39,16 +77,13 @@ tmux
 bash
 fish 
     fisher
-    fish-async-prompt (if u customize tide prompt, it is already async, so no need for this)
     z
     fzf.fish
+    fish-ssh-agent
     done
-    autopair.fish
-    nvm.fish
-    tldr
-    navi
     colored_man_pages.fish
     bass
+    nvm.fish
 
 sed & awk & grep 
 rg (ripgrep)
@@ -57,38 +92,19 @@ fzf
 fd 
 jq
 
-man-db
-man-pages (after installing the 2, run the mandb command)
-tldr
-cheat.sh 
-
+exa
+duf
 bat
 highlight
-exa
-tree
-duf
-diff-so-fancy
+delta (better diff, git diff)
 
-powertop
+procs
 htop
 neofetch
 
-newsboat
-
 nnn (cli file browser)
-
-vim
-neovim
-vscodium
-
-git
-gh-cli
-lazygit
-
-pandoc 
-TexLive / MacTex
-
-license (for generating software licenses)
+imagemagick
+viu
 
 zip, unzip, gzip
 tar 
@@ -98,10 +114,10 @@ wget
 ping 
 traceroute 
 ip (instead of deprecated ifconfig)
-ip n (instead of arp)
-ip tunnel (instead of iptunnel)
-ip link (instead of nameif)
-ip route (instead of route)
+    ip n (instead of arp)
+    ip tunnel (instead of iptunnel)
+    ip link (instead of nameif)
+    ip route (instead of route)
 nmap
 netcat
 bluecat (netcat for bluetooth)
@@ -117,7 +133,7 @@ openVpn
 rtorrent
 
 pass (password)
-
+hyperfine (benchmark commands)
 rmlint (system cleaner)
 
 mpd  (music)
@@ -125,6 +141,25 @@ ncmpcpp
 ffmpeg (audio / video converter)
 
 ventoy (usb)
+
+man-db
+man-pages (run mandb command once a day in cron)
+cppman (check github docs on exporting it to man)
+tldr
+cheat.sh 
+
+vim
+neovim
+vscodium
+
+git
+gh-cli
+lazygit
+
+pandoc 
+TexLive 
+
+license (for generating software licenses)
 
 
 #########################
@@ -135,20 +170,18 @@ c / c++
     gdb 
     clang (=> clangd, clang-format, lldb)
     make, cmake
-    cppman
 
 haskell
     ghcup (=> ghc, cabal, hls, floskell) 
 
 python
     pyenv (manage python versions)
-    pip3
-    miniconda 
-    poetry
     pip3, python3 (=> black)
+    poetry
+    miniconda 
 
 typescript & javascript
-    nvm
+    nvm (installed by fish)
     node 
     yarn
     npm
@@ -173,6 +206,7 @@ LSP
     - hls: https://github.com/haskell/haskell-language-server
 
     - npm i -g bash-language-server
+        - yay -S shellcheck
     - npm i -g vscode-langservers-extracted
     - npm i -g yaml-language-server
     - npm i -g @ansible/ansible-language-server
@@ -181,21 +215,9 @@ LSP
     - npm i -g pyright
 
 
-
-#########################
-# databases
-#########################
-postgresql
 pg-cli
 pgAdmin4
 
-mongodb
-mongo (javascript shell)
-
-
-#########################
-# containers
-#########################
 docker 
 kubectl + helm
 k3d
@@ -210,125 +232,90 @@ ansible (provisioning & managing cloud actions)
 
 
 #########################
-# gui_software
+# Productivity
 #########################
+gimp
+obs-studio
+kdenlive
+
+xdg-desktop-portal-wlr (screen sharing)
+firefox
+tor 
+
 zathura
 zathura-djvu
 zathura-pdf-mupdf
 mupdf
 
-feh (image)
-vlc (video)
-
-spotify (aur)
-spicetify-cli-git (aur)
-
-firefox
-tor 
-
-tableau-public
-imsonia (rest client)
-figma
-
 libre-office
+
 zotero
 obsidian
 ticktick
 
+imsonia (rest client)
+figma
+tableau-public
+
 thunderbird
 discord
+element
 slack
-
-gimp
-obs-studio
-kdenlive
+zoom
 
 
 
-####################################
-### linux system packages
-####################################
-environment:
+#########################
+# Custom ISO
+#########################
+system:
     refind
     os-prober
     zfs
     zfsBootmenu
 
-
-package:
-    reflector
-    expac
-    pacutils
-    pacFinder (gui)
-
-    yay (aur)
-    paru (aur)
-    flatpak
-
-    pacfinder
-
-
-graphical:
-    xdg-user-dirs
-    xdg-utils
-    xdg-ninja
-
-    xclip
-    clipit (aur)
-
-    libreoffice-fresh
-    shutter
-
-
-audio:
-    pipewire
-    pipewire-alsa
-    pipewire-pulse
-    pipewire-jack
-    pavucontrol
-
-input:
-    fcitx-im
-    fcitx-hangul
-    fcitx-configtool
-
-
-
-system:
     base
     base-devel
     linux
     linux-firmware
     linux-headers
 
-    wpa_supplicant + systemd-networkd + systemd-resolved
-    networkmanager + network-manager-applet
-    nm-connection-editor
-
-    dialog
-
 cpu:
     intel-ucode
 
 gpu:
     mesa
-    xf86-video-intel
+    intel-media-driver
 
-hardware:
-    blueman
+touchpad:
+    libinput 
+    gnome-tweaks
+
+wifi:
+    wpa_supplicant 
+    networkmanager 
+    network-manager-openvpn
+    nm-connection-editor
+    network-manager-applet
+
+bluetooth:
     bluez
     bluez-utils
+    blueman 
 
+printing:
     cups
+    cups-pdf
     hplip
+    system-config-printer
 
-power:
-    tlp
-    powertop
-    auto-cpufreq-git (aur)
-
-    cpupower
-    cpupower-gui (aur)
-    intel-undervolt
+audio:
+    pipewire
+    pipewire-alsa
+    pipewire-pulse
+    pipewire-jack
+    wireplumber
+    helvum
+    pavucontrol
 
 

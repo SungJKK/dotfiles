@@ -44,5 +44,22 @@ function install_arch_linux() {
     echo "hi this is on linux"
 }
 
+# Remove & create symlinks to config folders
+function remove_configs() {
+}
+function create_symlinks() {
+    # ~/.config/: 
+        # kitty, fish, htop, nnn, ncmpcpp, nvim 
+    dirs=(dir1 dir2 etc)       
+    for dir in "${dirs[@]}"; do    
+        ln -s "$HOME/Dotfiles/$dir" "$HOME/.config/$dir"    
+    done
+
+    # ~/: 
+        # tmux, bash, gitconfigs, vim
+}
+
 # Main
 detect_os
+
+
