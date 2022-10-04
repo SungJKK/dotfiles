@@ -46,6 +46,23 @@ alias cat 'bat'
 
 alias df 'duf --sort size'
 
+function pbcopy 
+    switch (uname)
+        case Linux 
+            command xclip -selection clipboard 
+        case Darwin
+            command pbcopy 
+    end
+end
+function pbpaste
+    switch (uname)
+        case Linux 
+            command xclip -selection clipboard -o
+        case Darwin
+            command pbpaste 
+    end
+end
+
 
 ### Abbreviations 
 abbr --add --global lman 'man $(find /usr/share/man/man1 -type f | shuf | head -1)'
