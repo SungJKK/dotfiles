@@ -10,9 +10,6 @@ This is my dotfiles for my machine, using :
 - To test it out on docker container:
 
 ### TODO
-- [ ] bash config  
-- [ ] fish configs 
-    - [ ] tide, fzf-fish, colored_man_pages, done, bass, fish-ssh-agent
 - [ ] configs for: gitconfig & delta, nnn, neofetch, ncmpcpp, lazygit, zathura
 - [ ] install script
 

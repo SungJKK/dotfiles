@@ -1,5 +1,5 @@
 #########################
-# Endeavour OS 
+# Endeavour OS
 #########################
 power:
     tlp
@@ -29,10 +29,8 @@ package:
     reflector
     expac
     pacutils
-
     yay 
     flatpak
-    pacfinder (gui)
 
 graphical:
     xdg-utils

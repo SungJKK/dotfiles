@@ -7,6 +7,16 @@ alias c 'code'
 alias f 'fzf'
 alias g 'git'
 
+# TODO: bangbang functionality in fish 
+# https://github.com/fish-shell/fish-shell/issues/288
+function sudo 
+    if test "$argv" = !!
+        eval command sudo $history[1]
+    else 
+        command sudo $argv 
+    end
+end
+
 alias ls 'exa --icons'
 alias ll 'exa --icons --long'
 alias la 'exa --icons --header --long --all --all --group --links --inode --blocks'

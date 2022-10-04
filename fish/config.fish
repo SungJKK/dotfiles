@@ -13,49 +13,53 @@ if status is-interactive
     set fish_cursor_insert underscore blink
     set fish_cursor_replace_one blink
     set fish_cursor_visual block blink
-
-    # TODO: accept auto-suggestion with ctrl+f (not working in tmux)
-    bind \cF accept-autosuggestion
 end
 
 
 ### Tide prompt configuration
-## Prompt config
-# right prompt
+### right prompt
 set -g tide_left_prompt_frame_enabled false
 set -g tide_left_prompt_prefix '  '
 set -g tide_left_prompt_items pwd git newline vi_mode character
 
-# left prompt
-set -g tide_right_prompt_frame_enabled false
-set -g tide_right_prompt_prefix '  '
-set -g tide_right_prompt_items status newline cmd_duration 
-
-## Items config
 # context 
+
 # pwd 
+
 # git 
-# status 
-# jobs
-# cmd_duration 
+
 # vi_mode 
-set -g tide_vi_mode_icon_default '[I]'
+set -g tide_vi_mode_icon_default '[D]'
 set -g tide_vi_mode_icon_replace '[R]'
 set -g tide_vi_mode_icon_visual '[V]'
+
 # character (prompt)
 
+# jobs
+
 # docker 
+
 # aws 
+
 # go 
+
 # kubectl
-# nix_shell
+
 # node
+
 # rustc
+
 # terraform
 
-# custom items 
+### left prompt
+set -g tide_right_prompt_frame_enabled false
+set -g tide_right_prompt_items status newline cmd_duration 
+set -g tide_right_prompt_suffix '  '
 
+# status 
 
+# cmd_duration 
+set -g tide_cmd_duration_threshold 3000
 
 
 
