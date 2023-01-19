@@ -1,0 +1,91 @@
+## Neovim
+# Refer to structure from below repositories:
+- nvim-ide 
+- knid.nvim
+- cosmic.nvim
+- astro.nvim
+- lunarvim
+
+
+# plugins:
+startups:
+- lazy.nvim
+- filetype.nvim
+
+treesitter & syntax:
+- nvim-treesitter
+- nvim-ts-context-commentstring
+- nvim-ts-autotag
+- nvim-autopairs
+
+- vim-log-highlighting
+- vim-surround
+
+telescope:
+- telescope.nvim
+- plenary.nvim
+- popup.nvim 
+- telescope-fzf-native.nvim
+- telescope-symbols.nvim
+- telescope-dict.nvim
+
+lsp:
+- mason.nvim 
+- mason-lspconfig.nvim 
+- nvim-lspconfig 
+- null-ls.nvim 
+- aerial.nvim 
+- nlsp-settings.nvim 
+- lsp-colors.nvim 
+- trouble.nvim 
+
+completions & snippets:
+- nvim-cmp 
+- luasnip 
+- friendly-snippets
+- cmp-nvim-lsp 
+- cmp-buffer 
+- cmp-path
+- cmp-nvim-lua 
+- cmp-latex-symbols 
+- cmp-dictionary
+- cmp_luasnip
+
+git:
+- gitsigns.nvim 
+- diffview.nvim 
+- octo.nvim 
+
+general:
+- tmux.nvim
+- toggleterm.nvim 
+- which-key.nvim 
+- Comment.nvim 
+- todo-comments.nvim
+- nvim-colorizer.lua
+- markdown-preview.nvim
+- nvim-notify
+- structlog.nvim
+
+UI:
+- tokyonight.nvim 
+- nightfox.nvim 
+- noctix.nvim 
+- oxocarbon.nvim 
+- nvim-web-devicons 
+
+- nvim-tree.lua
+- barbar.nvim 
+- nvim-navic 
+- lualine.nvim 
+
+- dashboard.nvim
+
+
+
+
+
+
+
+
+

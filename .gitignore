@@ -1,10 +1,2 @@
-# fish files
-fish/completions
-fish/functions
-fish/conf.d
-fish/fish_variables
-!fish/conf.d/env.fish
-!fish/conf.d/aliases.fish
-
 # vim files 
 vim/archive-*

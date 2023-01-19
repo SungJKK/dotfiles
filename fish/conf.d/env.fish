@@ -1,5 +1,4 @@
 ### Environment variables
-set -gx TERM xterm-256color
 set -gx LANG en_US.UTF-8
 set -gx LC_ALL en_US.UTF-8
 
@@ -7,7 +6,7 @@ set -gx LC_ALL en_US.UTF-8
 set -gx PAGER less
 set -gx EDITOR nvim
 set -gx TERMINAL kitty
-set -gx BROWSER firefox
+set -gx BROWSER 
 set -gx READER zathura
 set -gx PLAYER spotify
 
@@ -58,10 +57,9 @@ set -gx PLAYER spotify
  
 # ### PATH variable
 # export PATH="$PATH:$HOME/scripts" 
-
-# path=("/opt/homebrew/bin" "/Users/sung/.local/bin" "/Users/sung/.cargo/bin" "/Applications/Firefox.app/Contents/MacOS" "$HOME/.emacs.d/bin" "$path[@]")
-# typeset -U PATH path
-# export PATH
+fish_add_path -g  /opt/homebrew/bin
+fish_add_path -g /Users/sung/.local/bin
+fish_add_path -g /Applications/Firefox.app/Contents/MacOS
 
 # Fish 3.1+ doesn't add binaries to the path autmatically anymore
 # https://github.com/fish-shell/fish-shell/issues/6594
@@ -70,3 +68,6 @@ set -gx PLAYER spotify
 # # On M1 Macs, homebrew installs things in /opt/homebrew
 # contains /opt/homebrew/bin
 # or set PATH /opt/homebrew/bin $PATH
+
+
+

@@ -10,18 +10,15 @@ This is my dotfiles for my machine, using :
 - To test it out on docker container:
 
 ### TODO
-- [ ] configs for: gitconfig & delta, nnn, neofetch, ncmpcpp, lazygit, zathura
-- [ ] install script
-
-- [ ] fish configs 
+- [ ] fish
+    - [ ] z, fzf, colored_man_pages, nvm, done 
+    - [ ] conda, poetry, etc
     - [ ] path environments 
     - [ ] auto completion for programming (docker, kubectl, aws-cli, etc)
     - [ ] aliases for cli tools 
-- [ ] neovim config
+- [ ] configs for: gitconfig & delta, nnn, neofetch, lazygit, zathura
+- [ ] install script
 - [ ] showcase image & intro to tools used
-
-- [ ] bullet-proof arch linux install guide (zfs)
-- [ ] arch linux ricing & install scripts 
 - [ ] add key bindings cheat sheet
 
 ### Feedback 

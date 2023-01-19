@@ -1,16 +1,90 @@
-#########################
-# Endeavour OS
-#########################
-power:
-    tlp
-    powertop
-    auto-cpufreq-git (aur)
+# install essential packages during installation when using pacstrap
+base base-devel linux-firmware sof-firmware 
+linux linux-headers linux-zen linux-zen-headers 
+git vim man-db man-pages texinfo 
+networkmanager wpa_supplicant
+e2fsprogs
+amd-ucode
+refind # https://gist.github.com/PillTime/d1eea7b6e000112f7fd3da56962ad458
 
+
+# post installation 
+0. Connect to internet w/ nmcli
+    $ nmcli device wifi list
+    $ nmcli device wifi connect SSID password pwd
+
+- Enable NTP
+    $ timedatectl set-ntp true
+
+- Setup firewall 
+    $ 
+
+
+1. Configure pacman & mirrors & other helpers
+- enable colors & parallel downloads 
+    $ vim /etc/pacman.conf
+
+- enable reflector 
+    $ pacman -S reflector
+    $ reflector --latest 200 --protocol http,https --sort rate --save /etc/pacman.d/mirrorlist
+    $ systemctl enable reflector.timer
+    $ systemctl start reflector.timer
+
+- enable systemd pacman cache cleaner
+    $ pacman -S pacman-contrib
+    $ systemctl enable paccache.timer
+    $ systemctl start paccache.timer
+
+- * removing unused packages
+    $ pacman -Qtdq | pacman -Rns -
+    $ pacman -Qqd | pacman -Rsu [--print] -
+
+- install aur helper (yay)
+    $ cd /opt
+    $ git clone https://aur.archlinux.org/yay-git.git
+    $ sudo chown -R sung:sung ./yay-git
+    $ cd yay-git && makepkg -si
+
+- install other pacman helpers
+    $ pacman -S expac pacutils 
+
+- install flatpak 
+    $ pacman -S flatpak
+
+
+
+2. Setup hardware (ssd, cpu, bluetooth, audio, printer, keyboard input)
+- Enable trim for ssd
+    $ pacman -S util-linux
+    $ systemctl enable fstrim.service
+    $ systemctl enable fstrim.timer
+
+- CPU performance
     cpupower
     cpupower-gui (aur)
-    intel-undervolt
+    auto-cpufreq-git (aur)
 
-keyboard input:
+- Bluetooth 
+    bluez
+    bluez-utils
+    blueman 
+
+- Audio 
+    pipewire 
+    pipewire-alsa
+    pipewire-pulse
+    pipewire-jack
+    wireplumber
+
+    helvum
+
+- Printer
+    cups cups-pdf
+    $ systemctl enable cups.service
+    hplip
+    system-config-printer
+
+- Keyboard Input
     fcitx5
     fcitx5-im
     fcitx5-hangul
@@ -25,45 +99,61 @@ keyboard input:
     adobe-source-han-sans-kr-fonts
     nerd-fonts-complete (jetbrains, iosevka)
 
-package:
-    reflector
-    expac
-    pacutils
-    yay 
-    flatpak
 
-graphical:
-    xdg-utils
-    xdg-ninja
+6. Graphical
+- Display Drivers (GPU)
+    mesa xf86-video-amdgpu vulkan-radeon 
 
-    archlinux-tweak-tool-git
-    lxappearance (gtk)
-    kvantum (qt)
-    qt5ct 
+- Display server 
+    xorg
 
-    sddm
-    wlogout 
-    swaylock-effects
+- Desktop Environment
+    sddm 
+    plasma-desktop 
 
-    wayland 
-    xorg-xwayland 
-    xorg-xlsclients 
-    qt5-wayland 
-    qlfw-wayland
 
-    hyprland 
-    waybar 
-    eww
-    swww (wallpaper background)
-
-    wofi
+    picom
+    eww + rofi
     dunst
     clipman
-    thunar
 
     mvi (image)
     mpv (video)
 
+    xdg-ninja
+
+
+7. Apps & Tools
+    gimp
+    obs-studio
+    kdenlive
+
+    firefox-kde firefox-developer-edition-kde
+    tor 
+
+    zathura
+    zathura-djvu
+    zathura-pdf-mupdf
+    mupdf
+
+    libre-office
+
+    zotero
+    obsidian
+    ticktick
+
+    imsonia (rest client)
+    figma
+    tableau-public
+
+    thunderbird
+    discord
+    element
+    slack
+    zoom
+
+    borgbackup
+    vorta
 
 #########################
 # setup
@@ -98,7 +188,7 @@ delta (better diff, git diff)
 
 procs
 htop
-neofetch
+pfetch
 
 nnn (cli file browser)
 imagemagick
@@ -111,24 +201,18 @@ wget
 
 ping 
 traceroute 
-ip (instead of deprecated ifconfig)
-    ip n (instead of arp)
-    ip tunnel (instead of iptunnel)
-    ip link (instead of nameif)
-    ip route (instead of route)
-nmap
-netcat
-bluecat (netcat for bluetooth)
+ip (instead of deprecated ifconfig, arp, iptunnel, nameif, route commands)
+nmap & ncat + netstat
 nftables (firewall; instead of ufw or iptables)
 
 gnupg2
 openssh
 sftp
 rsync
-
-openssl
 openVpn
 rtorrent
+
+testdisk & safecopy (data recovery tools)
 
 pass (password)
 hyperfine (benchmark commands)
@@ -228,92 +312,67 @@ terraform (creating aws infranstructure)
 ansible (provisioning & managing cloud actions)
 
 
+    # misc:
+        # ping, traceroute, ip (iproute2mac)
+        # scp, sftp, nordvpn
 
-#########################
-# Productivity
-#########################
-gimp
-obs-studio
-kdenlive
+        # xdg-ninja
 
-xdg-desktop-portal-wlr (screen sharing)
-firefox
-tor 
-
-zathura
-zathura-djvu
-zathura-pdf-mupdf
-mupdf
-
-libre-office
-
-zotero
-obsidian
-ticktick
-
-imsonia (rest client)
-figma
-tableau-public
-
-thunderbird
-discord
-element
-slack
-zoom
+        # tldr
+        # cheat.sh 
+        # license (nishanths/license)
 
 
+        # c / c++
+        #     gcc / g++ 
+        #     gdb 
+        #     clang (=> clangd, clang-format, lldb)
+        #     make, cmake
+         
+        # haskell
+        #     ghcup (=> ghc, cabal, hls, floskell) 
+         
+        # python
+        #     pyenv (manage python versions)
+        #     pip3, python3 (=> black)
+        #     poetry
+        #     miniconda 
+         
+        # typescript & javascript
+        #     nvm (installed by fish)
+        #     node 
+        #     yarn
+        #     npm
+        #     (=> prettier)
+         
+        # rust
+        #     rustup (=> rust, cargo, stylua)
+        # go
+        # perl
+        # lua
+        # bash 
+        #     shellcheck
+     
+        # SETUP
+        #     - pip3 install pynvim
+        #     - npm i -g neovim
+         
+        # LSP
+        #     - cargo install asm-lsp
+        #
+        #     - lua: https://github.com/sumneko/lua-language-server
+        #     - clangd: 
+        #     - pip install cmake-language-server
+        #     - hls: https://github.com/haskell/haskell-language-server
+        #
+        #     - npm i -g bash-language-server
+        #         - yay -S shellcheck
+        #     - npm i -g vscode-langservers-extracted
+        #     - npm i -g yaml-language-server
+        #     - npm i -g @ansible/ansible-language-server
+        #     - npm i -g dockerfile-language-server-nodejs
+        #     - npm i -g typescript typescript-language-server
+        #     - npm i -g pyright
 
-#########################
-# Custom ISO
-#########################
-system:
-    refind
-    os-prober
-    zfs
-    zfsBootmenu
-
-    base
-    base-devel
-    linux
-    linux-firmware
-    linux-headers
-
-cpu:
-    intel-ucode
-
-gpu:
-    mesa
-    intel-media-driver
-
-touchpad:
-    libinput 
-    gnome-tweaks
-
-wifi:
-    wpa_supplicant 
-    networkmanager 
-    network-manager-openvpn
-    nm-connection-editor
-    network-manager-applet
-
-bluetooth:
-    bluez
-    bluez-utils
-    blueman 
-
-printing:
-    cups
-    cups-pdf
-    hplip
-    system-config-printer
-
-audio:
-    pipewire
-    pipewire-alsa
-    pipewire-pulse
-    pipewire-jack
-    wireplumber
-    helvum
-    pavucontrol
 
 
