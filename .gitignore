@@ -1,2 +1,5 @@
 # vim files 
 vim/archive-*
+
+# shell history
+.zsh_history

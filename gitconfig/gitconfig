@@ -10,17 +10,26 @@
 	excludesFile = ~/.gitignore
 	editor = nvim
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	pager = less
-[pager]
-	branch = false
-[diff]
-	tool = vimdiff
+	pager = delta
 [color]
 	ui = auto
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true # use n and N to move between diff sections 
+    light = false # set to true if terminal has light background color 
+[merge]
+    conflictstyle = diff3
+[diff]
+	tool = vimdiff
+    colorMoved = default
 [init]
 	defaultBranch = main
+[pager]
+ 	branch = false
 [credential]
-    helper = osxkeychain
+     helper = git-credential-libsecret ;gnome keyring
+     ; helper = osxkeychain
 
 ## aliases ##
 #############

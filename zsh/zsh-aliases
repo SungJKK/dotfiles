@@ -1,0 +1,132 @@
+alias v='vim'
+alias n='nvim'
+alias c='code'
+alias f='fzf'
+alias g='git'
+
+# alias ls='ls -hN --color=auto --group-directories-first'
+# alias ll='ls -l'
+# alias la='ls -al'
+# alias lt='ls --human-readable --size -l -S --classify'
+alias ls='exa --icons'
+alias ll='exa --icons --long'
+alias la='exa --icons --header --long --all --group --links --inode --blocks'
+alias lt='exa --icons --long --tree --level=2'
+alias lg='exa --icons --long --group --all --git'
+
+# show contents of directory
+cd() {
+  DIR="$*";
+    # if no DIR given, go home
+    if [ $# -lt 1 ]; then
+      DIR=$HOME;
+    fi;
+  builtin cd "${DIR}" && ls 
+}
+
+# alias mkdir='mkdir -pv'
+mkdir() {
+  command mkdir -pv "$@"
+}
+
+alias rm='rm -i'
+alias rms='mv --force -t ~/.local/share/Trash/files'
+  # save files into trash
+alias rmf='rm -rf'
+  # force remove all files
+
+alias wget='wget -c'
+  # resume wget by default
+
+alias ip='ip --color=auto'
+
+alias diff 'delta'
+    # delta is also automatically applied to grep outputs
+
+alias grep='grep --color=always'
+
+# alias cat='highlight --out-format=ansi'
+alias cat='bat'
+
+alias df='duf --sort size'
+
+alias lman='man $(find /usr/share/man/man1 -type f | shuf | head -1)'
+  # generate random man pages to learn about linux 
+
+alias last='exa --icons --long --sort=modified'
+  # last files edited
+alias lf='du -sh * | sort -h'
+    # only OSX; show files by size
+
+# make mount more readable 
+alias mount='mount | column -t'
+alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | grep -E /dev/ | sort"
+  # view only mounted devices
+  # in macOS : alias mnt='mount | grep -E ^/dev | column -t'
+
+# find command in history
+alias h='history'
+alias hg='history | grep'
+alias hgi='history | grep -i'
+
+# copy using rsync. 
+# Rsync is good for copying files both locally and remotely.
+alias cpv='rsync -ah --info=progress2'
+
+alias count='find . -type f | wc -l'
+  # count files 
+
+alias port='lsof -i'
+    # find out whats running on port X
+
+alias find='fd'
+
+alias ps='procs'
+alias paux='ps aux | less'
+  # show processes
+
+alias rmf='rm -rfI'
+# rms() {
+#     # TODO: create cron job to clean Trash every interval
+#     if not test -d ~/.local/share/Trash
+#         mkdir ~/.local/share/Trash
+#     end
+#     mv --force $argv ~/.local/share/Trash
+# }
+
+# function pbcopy 
+#     switch (uname)
+#         case Linux 
+#             command xclip -selection clipboard 
+#         case Darwin
+#             command pbcopy 
+#     end
+# end
+# function pbpaste
+#     switch (uname)
+#         case Linux 
+#             command xclip -selection clipboard -o
+#         case Darwin
+#             command pbpaste 
+#     end
+# end
+
+# colored man pages
+man() {
+  export LESS_TERMCAP_mb=$'\e[1;33m'
+  export LESS_TERMCAP_md=$'\e[1;33m'
+  export LESS_TERMCAP_me=$'\e[0m'
+
+  export LESS_TERMCAP_so=$'\e[01;31m'
+  export LESS_TERMCAP_se=$'\e[0m'
+
+  export LESS_TERMCAP_ue=$'\e[0m'
+  export LESS_TERMCAP_us=$'\e[1;4;34m'
+
+  export GROFF_NO_SGR=1
+  command man "$@"
+}
+
+## Abbreviations (by zsh-abbr)
+# abbr add gcm='gitr checkout main'
+# $ gco[Space] # expands as git checkout

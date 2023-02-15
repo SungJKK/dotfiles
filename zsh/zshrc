@@ -1,0 +1,132 @@
+# -----------------
+# Zsh configuration
+# -----------------
+### If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+### Settings
+# Colors
+autoload -Uz colors && colors
+
+# OPTIONS
+# save each command's beginning timestamp and the duration to the history file
+setopt extended_history          
+setopt share_history
+# this is default, but set for share_history
+setopt append_history
+setopt hist_expire_dups_first 
+setopt hist_ignore_dups
+# Remove duplicates from history
+setopt histignorealldups
+setopt hist_find_no_dups
+setopt hist_reduce_blanks
+
+# no beeping sounds
+setopt nobeep
+# no c-s/c-q output freezing
+setopt noflowcontrol
+# allow expansion in prompts
+setopt prompt_subst
+# display PID when suspending processes as well
+setopt longlistjobs
+# try to avoid the 'zsh: no matches found...'
+setopt nonomatch
+# report the status of backgrounds jobs immediately
+setopt notify
+# whenever a command completion is attempted, make sure the entire command path is hashed first.
+setopt hash_list_all
+# not just at the end
+setopt completeinword
+# use zsh style word splitting
+setopt noshwordsplit
+# allow use of comments in interactive code
+setopt interactivecomments
+# Don't send SIGHUP to background processes when the shell exits.
+setopt nohup
+# don't push the same dir twice.
+setopt pushd_ignore_dups
+
+# Set editor default keymap to emacs (`-e`) or vi (`-v`)
+bindkey -v
+
+
+# --------------------
+# Zim plugins config 
+# --------------------
+# completions 
+
+# zsh-autosuggestions
+# Disable automatic widget re-binding on each precmd. This can be set when
+# zsh-users/zsh-autosuggestions is the last module in your ~/.zimrc.
+ZSH_AUTOSUGGEST_MANUAL_REBIND=1
+
+# Customize the style that the suggestions are shown with.
+# See https://github.com/zsh-users/zsh-autosuggestions/blob/master/README.md#suggestion-highlight-style
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#585858"
+
+# zsh-abbr (linux / macOS)
+ZSH_HIGHLIGHT_REGEXP+=('^[[:blank:][:space:]]*('${(j:|:)${(k)ABBR_REGULAR_USER_ABBREVIATIONS}}')$' 'fg=#585858')
+ZSH_HIGHLIGHT_REGEXP+=('\<('${(j:|:)${(k)ABBR_GLOBAL_USER_ABBREVIATIONS}}')$' 'fg=#585858')
+    # linux
+# ZSH_HIGHLIGHT_REGEXP+=('[[:<:]]('${(j:|:)${(k)ABBR_GLOBAL_USER_ABBREVIATIONS}}')$' <styles for global abbreviations>)
+    # macOS
+
+
+# ------------------
+# Initialize modules
+# ------------------
+ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
+# Download zimfw plugin manager if missing.
+if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
+  if (( ${+commands[curl]} )); then
+    curl -fsSL --create-dirs -o ${ZIM_HOME}/zimfw.zsh \
+        https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
+  else
+    mkdir -p ${ZIM_HOME} && wget -nv -O ${ZIM_HOME}/zimfw.zsh \
+        https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
+  fi
+fi
+# Install missing modules, and update ${ZIM_HOME}/init.zsh if missing or outdated.
+if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
+  source ${ZIM_HOME}/zimfw.zsh init -q
+fi
+# Initialize modules.
+source ${ZIM_HOME}/init.zsh
+
+
+# ------------------
+# Post module config
+# ------------------
+eval "$(zoxide init zsh)"
+
+# ------------------------------
+# User Aliases & Abbreviations
+# ------------------------------
+source $ZDOTDIR/zsh-aliases
+
+
+# ------------------------------
+# Coding related setup
+# ------------------------------
+### Rust - Cargo
+path=("$HOME/.cargo/bin" "$path[@]")
+
+### Haskell - Ghcup
+# [ -f "/Users/sung/.ghcup/env" ] && source "/Users/sung/.ghcup/env" # mac
+[ -f "/home/sung/.ghcup/env" ] && source "/home/sung/.ghcup/env" # linux
+
+### Python - Conda
+[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
+
+### PATH variable
+# path=("/opt/homebrew/bin" "/Users/sung/.local/bin" "/Users/sung/.cargo/bin" "/Applications/Firefox.app/Contents/MacOS" "$path[@]")
+typeset -U PATH path
+export PATH
+
+### Starship prompt
+export STARSHIP_CONFIG=$ZDOTDIR/starship.toml
+echo -ne '\e[3 q'
+
+### Enabling combining characters (for wezterm)
+setopt COMBINING_CHARS
+

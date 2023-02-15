@@ -1,0 +1,32 @@
+### ZPROFILE ###
+# Anything not directly linked with zsh goes here
+
+# Default fzf command
+export FZF_DEFAULT_COMMAND="rg --color=auto --files --smart-case --hidden --follow --glob '!.git'"
+
+# Zsh configs directory
+export ZDOTDIR=$HOME/.config/zsh
+export ZIM_HOME=~/.cache/zim
+export ZIM_CONFIG_FILE=$ZDOTDIR/zimrc
+
+# Starship prompt
+export STARSHIP_CONFIG=$ZDOTDIR/starship.toml
+
+# Zsh history
+export HISTFILE=$ZDOTDIR/.zsh_history
+export SAVEHIST=10000
+export HISTSIZE=10000
+export HISTFILESIZE=10000
+export HISTTIMEFORMAT="[%F %T] "
+
+# Default applications
+export LANG=en_US.UTF-8
+export PAGER=less
+
+export EDITOR="nvim"
+export TERMINAL="kitty"
+export BROWSER="firefox"
+export READER="zathura"
+export PLAYER="spotify"
+
+. "$HOME/.cargo/env"

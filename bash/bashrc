@@ -14,7 +14,6 @@ set -o vi
 # disable history
 unset HISTFILE
 
-
 # ==> Aliases : You can check aliases with  $ alias
 # better output
 function man() {
@@ -122,3 +121,4 @@ PS1="\n \[\033[0;34m\]┌─||\[\033[1;31m\]\t\[\033[1;37m\], \j ⇄ , \[\033[1;
 
 
 
+. "$HOME/.cargo/env"

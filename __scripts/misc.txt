@@ -1,0 +1,96 @@
+# Arch linux installations
+
+# install essential packages during installation when using pacstrap
+base base-devel linux-firmware sof-firmware 
+linux linux-headers linux-zen linux-zen-headers 
+git vim man-db man-pages texinfo 
+networkmanager wpa_supplicant
+e2fsprogs
+amd-ucode
+refind # https://gist.github.com/PillTime/d1eea7b6e000112f7fd3da56962ad458
+
+# post installation 
+0. Connect to internet w/ nmcli
+    $ nmcli device wifi list
+    $ nmcli device wifi connect SSID password pwd
+
+- Enable NTP
+    $ timedatectl set-ntp true
+
+- Setup firewall 
+    $ 
+
+
+1. Configure pacman & mirrors & other helpers
+- enable colors & parallel downloads 
+    $ vim /etc/pacman.conf
+
+- enable reflector 
+    $ pacman -S reflector
+    $ reflector --latest 200 --protocol http,https --sort rate --save /etc/pacman.d/mirrorlist
+    $ systemctl enable reflector.timer
+    $ systemctl start reflector.timer
+
+- enable systemd pacman cache cleaner
+    $ pacman -S pacman-contrib
+    $ systemctl enable paccache.timer
+    $ systemctl start paccache.timer
+
+- * removing unused packages
+    $ pacman -Qtdq | pacman -Rns -
+    $ pacman -Qqd | pacman -Rsu [--print] -
+
+- install aur helper (yay)
+    $ cd /opt
+    $ git clone https://aur.archlinux.org/yay-git.git
+    $ sudo chown -R sung:sung ./yay-git
+    $ cd yay-git && makepkg -si
+
+- install other pacman helpers
+    $ pacman -S expac pacutils 
+
+- install flatpak 
+    $ pacman -S flatpak
+
+
+
+2. Setup hardware (ssd, cpu, bluetooth, audio, printer, keyboard input)
+- Enable trim for ssd
+    $ pacman -S util-linux
+    $ systemctl enable fstrim.service
+    $ systemctl enable fstrim.timer
+
+- CPU performance
+    auto-cpufreq-git (aur)
+
+- Bluetooth 
+    bluez
+    bluez-utils
+    blueman 
+
+- Audio 
+    pipewire 
+    pipewire-alsa
+    pipewire-pulse
+    pipewire-jack
+    wireplumber
+    helvum
+    pavucontrol
+
+- Printer
+    cups cups-pdf
+    $ systemctl enable cups.service
+    hplip
+    system-config-printer
+
+- Keyboard Input
+    fcitx5 fcitx5-im fcitx5-hangul
+    fcitx5-qt fcitx5-gtk
+    adobe-source-han-sans-kr-fonts
+    ttf-ms-fonts (aur)
+
+- Display Drivers (GPU)
+    mesa xf86-video-amdgpu vulkan-radeon 
+
+
+

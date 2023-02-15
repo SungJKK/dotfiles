@@ -1,0 +1,45 @@
+# Commands cheat sheet:
+# zimfw upgrade # upgrade Zim
+# zimfw [install | uninstall | update]
+
+# Zim modules can be found here:
+# https://zimfw.sh/docs/modules/
+
+# completions & suggestions
+zmodule zsh-users/zsh-completions 
+zmodule completion
+zmodule zsh-users/zsh-syntax-highlighting
+zmodule zsh-users/zsh-autosuggestions
+
+# zsh abbreviations
+zmodule olets/zsh-abbr
+
+# kubectl completions
+zmodule k
+# kubectl
+zmodule joke/zim-kubectl
+# helm for kubernetes
+zmodule joke/zim-helm
+# minikube
+zmodule joke/zim-minikube
+
+# aliases for pacman / homebrew
+zmodule pacman
+zmodule homebrew
+
+# easier archiving commands
+zmodule archive
+
+# github-cli
+zmodule joke/zim-github-cli
+
+# starship prompt
+zmodule joke/zim-starship
+
+# nvm
+zmodule lukechilds/zsh-nvm
+
+# pyenv
+zmodule mattberther/zsh-pyenv
+
+
